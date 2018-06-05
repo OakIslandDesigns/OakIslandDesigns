@@ -1,0 +1,125 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "grid";
+@import "normalize";
+
+/* Variables
+=================================*/
+$colorAccentLight: #ccc;
+$colorAccent: #666;
+$colorAccentDark: #000;
+
+$gutterXs: 5px;
+$gutterSm: 10px;
+$gutterMd: 15px;
+$gutterDef: 20px;
+$gutterLg: 25px;
+$gutterXlg: 30px;
+
+$screenXs: 480px;
+$screenSm: 768px;
+$screenMd: 1024px;
+$screenLg: 1280px;
+$screenXlg: 1440px;
+
+$fontSizeH6: 1.6;
+$fontSizeH5: 2.0;
+$fontSizeH4: 2.4;
+$fontSizeH3: 2.8;
+$fontSizeH2: 3.2;
+$fontSizeH1: 3.6;
+
+/* Mixins
+=================================*/
+/* Used to set font sizes in REMs
+with a Pixel fallback Usage:
+@include font-size(13) */
+@mixin fontSize($size:1.6, $line: $size * 1.25){
+  font-size:   ($size * 10) + px;
+  line-height: ($line * 10) + px;
+  font-size:   $size + rem;
+  line-height: $line + rem;
+}
+
+/* Default
+=================================*/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, .h1 {@include fontSize($fontSizeH1);}
+h2, .h2 {@include fontSize($fontSizeH2);}
+h3, .h3 {@include fontSize($fontSizeH3);}
+h4, .h4 {@include fontSize($fontSizeH4);}
+h5, .h5 {@include fontSize($fontSizeH5);}
+h6, .h6 {@include fontSize($fontSizeH6);}
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+p {
+  @include fontSize($fontSizeH6);
+  margin-bottom: $gutterMd;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+strong {
+  font-weight: 700;
+}
+
+/* Global
+=================================*/
+.button {
+  &:hover {
+  }
+  &.button--full {
+    display: block;
+    width: 100%;
+  }
+}
+.un-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.inline {
+  display: inline-block;
+  vertical-align: top;
+}
+.padding {
+  padding-bottom: $gutterDef;
+}
+
+/* Footer
+=================================*/
+.copyright {
+  @include fontSize(1.2);
+}
+
+/* Responsive
+=================================*/
+@media only screen and (max-width: $screenLg) {
+
+}
+@media only screen and (max-width: $screenMd) {
+
+}
+@media only screen and (max-width: $screenSm) {
+
+}
+@media only screen and (max-width: $screenXs) {
+
+}
