@@ -8,8 +8,12 @@
 /* Variables
 =================================*/
 $colorAccentLight: #ccc;
-$colorAccent: #666;
+$colorAccent: #32BDB4;
 $colorAccentDark: #000;
+
+$colorDefault: #FAFECE;
+
+$colorDark: #28232F;
 
 $gutterXs: 5px;
 $gutterSm: 10px;
@@ -36,10 +40,18 @@ $fontSizeH1: 3.6;
 /* Used to set font sizes in REMs
 with a Pixel fallback Usage:
 @include font-size(13) */
-@mixin fontSize($size:1.6, $line: $size * 1.25){
+@mixin fontAndHeight($size:1.6, $line: $size * 1.25){
   font-size:   ($size * 10) + px;
   line-height: ($line * 10) + px;
   font-size:   $size + rem;
+  line-height: $line + rem;
+}
+@mixin fontSize($size:1.6){
+  font-size:   ($size * 10) + px;
+  font-size:   $size + rem;
+}
+@mixin lineHeight($line: 1.6){
+  line-height: ($line * 10) + px;
   line-height: $line + rem;
 }
 
@@ -53,15 +65,24 @@ html {
 }
 body {
   font-family: 'Montserrat', sans-serif;
+  @include fontAndHeight($fontSizeH6);
+  color: $colorDefault;
+  background-image: url('{{ "/assets/images/background.png" | relative_url }}');
+  border-top: 5px solid $colorAccent;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-h1, .h1 {@include fontSize($fontSizeH1);}
-h2, .h2 {@include fontSize($fontSizeH2);}
-h3, .h3 {@include fontSize($fontSizeH3);}
-h4, .h4 {@include fontSize($fontSizeH4);}
-h5, .h5 {@include fontSize($fontSizeH5);}
-h6, .h6 {@include fontSize($fontSizeH6);}
+.wrapper {
+  height: 100vh;
+  overflow-y: scroll;
+}
+h1, .h1 {@include fontAndHeight($fontSizeH1);}
+h2, .h2 {@include fontAndHeight($fontSizeH2);}
+h3, .h3 {@include fontAndHeight($fontSizeH3);}
+h4, .h4 {@include fontAndHeight($fontSizeH4);}
+h5, .h5 {@include fontAndHeight($fontSizeH5);}
+h6, .h6 {@include fontAndHeight($fontSizeH6);}
 a {
   text-decoration: none;
   &:hover {
@@ -69,7 +90,7 @@ a {
   }
 }
 p {
-  @include fontSize($fontSizeH6);
+  @include fontAndHeight($fontSizeH6);
   margin-bottom: $gutterMd;
 }
 img {
@@ -83,7 +104,28 @@ strong {
 /* Global
 =================================*/
 .button {
+  display: inline-block;
+  padding: 5px 15px;
+  @include fontSize($fontSizeH6);
+  @include lineHeight(2);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorDark;
+  background-color: $colorDefault;
+  border: 3px solid $colorDefault;
+  border-radius: 50px;
   &:hover {
+    text-decoration: none;
+    color: $colorDefault;
+    background: transparent;
+  }
+  &.button--outline {
+    color: $colorDefault;
+    background-color: transparent;
+    &:hover {
+      color: $colorDark;
+      background-color: $colorDefault;
+    }
   }
   &.button--full {
     display: block;
@@ -103,10 +145,67 @@ strong {
   padding-bottom: $gutterDef;
 }
 
+/* Sidebar
+=================================*/
+.header {
+  position: sticky;
+  top: -1px;
+  margin-top: -1px;
+}
+.header__logo {
+  margin: 0;
+  margin-bottom: 40px;
+}
+.header__logo-img {
+  width: 100%;
+}
+.header__nav-link {
+  display: block;
+  margin-bottom: $gutterDef;
+  @include fontAndHeight($fontSizeH6);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $colorAccent;
+  &:hover {
+    text-decoration: none;
+    text-shadow: 0 0 15px #22FFCE;
+  }
+}
+
+/* Home
+=================================*/
+.home__banner {
+  position: relative;
+  height: calc(100vh - 5px);
+}
+.home__banner-inner {
+  position: absolute;
+  top: calc(275px + 30px);
+  left: 0;
+  z-index: 5;
+  width: 100%;
+}
+.home__banner-title {
+  margin-top: 0;
+  @include fontAndHeight(4.2);
+  text-transform: lowercase;
+  color: $colorAccent;
+}
+.home__banner-text {
+  margin-bottom: $gutterDef;
+  @include fontSize(1.6);
+  @include lineHeight(2.6);
+}
+.home__banner-buttons {
+  .button {
+    margin-right: $gutterDef;
+  }
+}
+
 /* Footer
 =================================*/
 .copyright {
-  @include fontSize(1.2);
+  @include fontAndHeight(1.2);
 }
 
 /* Responsive

@@ -4,17 +4,21 @@
   {% include head.html %}
 
   <body class="template-{{ page.layout | downcase | escape }}">
-
     <div class="wrapper">
+      <div class="container">
 
-      {% include header.html %}
+        <div class="grid">
+          <div class="col-2">
+            {% include sidebar.html %}
+          </div>
+          <div class="col-9" data-push-left="off-1">
+            {{ content }}
+            {% include footer.html %}
+          </div>
+        </div>
 
-      {{ content }}
-
-      {% include footer.html %}
-
+      </div>
     </div>
-
   </body>
 
 </html>
