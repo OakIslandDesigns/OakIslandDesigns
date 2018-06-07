@@ -12,8 +12,8 @@ $colorAccent: #32BDB4;
 $colorAccentDark: #000;
 
 $colorDefault: #FAFECE;
-
 $colorDark: #28232F;
+$colorLightest: #F8F8F8;
 
 $gutterXs: 5px;
 $gutterSm: 10px;
@@ -116,15 +116,15 @@ strong {
   border-radius: 50px;
   &:hover {
     text-decoration: none;
-    color: $colorDefault;
-    background: transparent;
+    background-color: $colorAccent;
+    border-color: $colorAccent;
   }
   &.button--outline {
     color: $colorDefault;
     background-color: transparent;
     &:hover {
-      color: $colorDark;
-      background-color: $colorDefault;
+      color: $colorAccent;
+      background-color: transparent;
     }
   }
   &.button--full {
@@ -174,24 +174,19 @@ strong {
 
 /* Home
 =================================*/
-.home__banner {
-  position: relative;
-  height: calc(100vh - 5px);
+.home__section {
+  margin-bottom: 300px;
 }
 .home__banner-inner {
-  position: absolute;
-  top: calc(275px + 30px);
-  left: 0;
-  z-index: 5;
-  width: 100%;
+  margin-top: calc(275px + 30px);
 }
-.home__banner-title {
+.home__title {
   margin-top: 0;
   @include fontAndHeight(4.2);
   text-transform: lowercase;
   color: $colorAccent;
 }
-.home__banner-text {
+.home__text {
   margin-bottom: $gutterDef;
   @include fontSize(1.6);
   @include lineHeight(2.6);
@@ -200,6 +195,58 @@ strong {
   .button {
     margin-right: $gutterDef;
   }
+}
+
+.project {
+  margin-bottom: 30px;
+}
+.project__top {
+  padding: 10px;
+  background-color: $colorAccent;
+}
+.project__title {
+  margin: 0;
+  @include fontSize(1.8);
+  @include lineHeight(1.5);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $colorDark;
+}
+.project__label {
+  margin: 0;
+  @include fontSize(0.8);
+  @include lineHeight(0.8);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $colorDark;
+}
+.project__services {
+  margin: 0;
+  @include fontSize(1.4);
+  @include lineHeight(1.4);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: $colorDark;
+}
+.project__link {
+  @include fontSize(1.6);
+  @include lineHeight(1.6);
+  color: $colorDark;
+  &:hover {
+    color: $colorDefault;
+  }
+}
+.project__content {
+  padding: 50px 40px;
+  background: $colorLightest;
+}
+.home__banner-logo {
+  max-height: 230px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.home__banner-site {
+  padding: 30px;
 }
 
 /* Footer
