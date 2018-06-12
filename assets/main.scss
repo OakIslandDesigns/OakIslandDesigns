@@ -90,7 +90,8 @@ a {
   }
 }
 p {
-  @include fontAndHeight($fontSizeH6);
+  @include fontSize(1.6);
+  @include lineHeight(2.6);
   margin-bottom: $gutterMd;
 }
 img {
@@ -248,6 +249,12 @@ strong {
 .home__banner-site {
   padding: 30px;
 }
+/* Mobile
+=================================*/
+.header__logo-mobile {
+  max-width: 200px;
+  margin: 0;
+}
 
 /* Footer
 =================================*/
@@ -264,7 +271,29 @@ strong {
 
 }
 @media only screen and (max-width: $screenSm) {
-
+  .header {
+    padding-top: 40px;
+  }
+  .header__nav-link {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 0;
+    padding: 0 5px;
+  }
+  .home__banner-buttons {
+    .button {
+      margin-bottom: $gutterDef;
+    }
+  }
+  .project__title {
+    margin-bottom: 10px;
+    br {
+      display: none;
+    }
+  }
+  .project__content {
+    padding: 20px 10px 0 10px;
+  }
 }
 @media only screen and (max-width: $screenXs) {
 
