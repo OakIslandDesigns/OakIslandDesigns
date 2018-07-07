@@ -274,11 +274,11 @@ strong {
   .header {
     padding-top: 40px;
   }
-  .header__nav-link {
-    display: inline-block;
+  .header__nav {
     margin-top: 40px;
-    margin-bottom: 0;
-    padding: 0 5px;
+  }
+  .header__nav-link {
+    padding: 5px 0;
   }
   .home__banner-buttons {
     .button {
@@ -296,5 +296,9 @@ strong {
   }
 }
 @media only screen and (max-width: $screenXs) {
-
+  #contact {
+    .button {
+      font-size: 13px;
+    }
+  }
 }
