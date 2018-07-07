@@ -16,7 +16,7 @@
 title: Oak Island Designs
 email: justinpatenaude92@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Need a website? We've got you covered. We build websites that are both beautiful and functional. Let's char about how we can make a website that meets the needs of both you and your users.
+  Need a website? We've got you covered. We build websites that are both beautiful and functional.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://oakislanddesigns.com" # the base hostname & protocol for your site, e.g. http://example.com
 
