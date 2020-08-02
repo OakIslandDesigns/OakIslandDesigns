@@ -7,15 +7,11 @@
     <div class="wrapper">
       <div class="container">
 
-        <div class="grid">
-          <div class="col-2_sm-12">
-            {% include sidebar.html %}
-          </div>
-          <div class="col-9_sm-12" data-push-left="off-1_sm-0">
-            {{ content }}
-            {% include footer.html %}
-          </div>
-        </div>
+        {% include header.html %}
+
+        {{ content }}
+
+        {% include footer.html %}
 
       </div>
     </div>

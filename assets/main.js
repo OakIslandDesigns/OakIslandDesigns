@@ -14,4 +14,23 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	$('.home__work-box--imac').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: true,
+		fixedContentPos: true,
+		verticalFit: false,
+		mainClass: "work-modal work-modal--mockup"
+	});
+
+	$('.home__work-box--logo').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: true,
+		fixedContentPos: true,
+		verticalFit: false,
+		mainClass: "work-modal work-modal--logo"
+	});
+
 });

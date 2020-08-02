@@ -10,13 +10,13 @@ Y88b  d88P 888  T88b    888   888  .d88P
 
 
 // Variables
-$container: 1024px;
-$large: 1024px;
-$medium: 1024px;
+$container: 980px;
+$large: 980px;
+$medium: 980px;
 $small: 768px;
 $extrasmall: 480px;
 $tiny: 320px;
-$gl-gutter: 24px;
+$gl-gutter: 30px;
 
 $postSmall: $small + 1;
 $gl-xs: "screen and (max-width: #{$extrasmall})";
