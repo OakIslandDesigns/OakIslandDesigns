@@ -265,6 +265,12 @@ strong {
     @include fontSize(1.8);
     @include lineHeight(2.4);
   }
+  &.home__section-text--small {
+    p {
+      @include fontSize(1.4);
+      @include lineHeight(1.8);
+    }
+  }
 }
 
 /* Home - Banner
