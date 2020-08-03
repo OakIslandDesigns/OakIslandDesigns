@@ -184,9 +184,8 @@ strong {
     flex: none;
     display: block;
     width: 100%;
-    height: 25%;
     margin-left: 0;
-    line-height: 25vh;
+    padding: 20px 0;
     text-align: center;
   }
 }
@@ -209,7 +208,7 @@ strong {
   }
 }
 .header__nav-mobile-header {
-  padding: 20px 20px 0 20px;
+  padding: 20px;
   border-top: 5px solid $colorAccent;
 }
 .header__mobile-button {
