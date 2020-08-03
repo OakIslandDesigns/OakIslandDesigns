@@ -5,15 +5,15 @@
 
   <body class="template-{{ page.layout | downcase | escape }}">
     <div class="wrapper">
+      
+      {% include header.html %}
+
       <div class="container">
-
-        {% include header.html %}
-
         {{ content }}
-
-        {% include footer.html %}
-
       </div>
+
+      {% include footer.html %}
+      
     </div>
   </body>
 

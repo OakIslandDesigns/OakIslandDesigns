@@ -69,8 +69,7 @@ body {
   font-family: 'Karla', sans-serif;
   @include fontAndHeight($fontSizeH6);
   color: $colorDefault;
-  background-image: url('{{ "/assets/images/background.png" | relative_url }}');
-  border-top: 5px solid $colorAccent;
+  background-color: $colorDark;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -137,6 +136,10 @@ strong {
 }
 .padding {
   padding-bottom: $gutterDef;
+
+  @media only screen and (max-width: $screenSm) {
+    padding-bottom: $gutterSm;
+  }
 }
 .max-600 {
   max-width: 600px;
@@ -146,17 +149,46 @@ strong {
 =================================*/
 .header {
   margin-bottom: 100px;
+  padding-top: 20px;
+  border-top: 5px solid $colorAccent;
 }
 .header__logo {
   margin: 0;
+  width: 100px;
+}
+.header__nav-wrapper {
+  @media only screen and (max-width: $screenSm) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: $colorDark;
+  }
 }
 .header__nav {
   display: flex;
   justify-content: flex-end;
+
+  @media only screen and (max-width: $screenSm) {
+    display: block;
+    height: calc(100vh - 74px);
+  }
 }
 .header__nav-item {
   flex: 0 1 auto;
   margin-left: 20px;
+
+  @media only screen and (max-width: $screenSm) {
+    flex: none;
+    display: block;
+    width: 100%;
+    height: 25%;
+    margin-left: 0;
+    line-height: 25vh;
+    text-align: center;
+  }
 }
 .header__nav-link {
   @include fontSize(1.4);
@@ -171,12 +203,55 @@ strong {
     text-shadow: 0 0 10px $colorAccent;
     color: $colorAccent;
   }
+  @media only screen and (max-width: $screenSm) {
+    @include fontSize(2.4);
+    letter-spacing: 3px;
+  }
+}
+.header__nav-mobile-header {
+  padding: 20px 20px 0 20px;
+  border-top: 5px solid $colorAccent;
+}
+.header__mobile-button {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 0;
+}
+.header__mobile-button-text {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  padding-right: 10px;
+  @include fontSize(1.4);
+  @include lineHeight(1.5);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $colorDefault;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+.header__mobile-button-icon {
+  display: inline-block;
+  vertical-align: top;
+  height: 15px;
+}
+.header__mobile-button-close-wrapper {
+  position: absolute;
+  top: $gutterSm;
+  right: $gutterSm;
+  z-index: 15;
 }
 
 /* Home
 =================================*/
 .home__section {
-  margin-bottom: 200px;
+  padding-top: $gutterSm;
+  margin-bottom: 180px;
+
+  @media only screen and (max-width: $screenSm) {
+    padding-top: $gutterSm;
+    margin-bottom: 80px;
+  }
 }
 .home__section-title {
   margin: 0 0 $gutterDef 0;
@@ -197,9 +272,14 @@ strong {
 =================================*/
 .home__banner-title {
   margin: 0 0 $gutterSm 0;
-  @include fontAndHeight(4.8);
+  @include fontSize(4.8);
   @include lineHeight(4.8);
   color: $colorAccent;
+
+  @media only screen and (max-width: $screenSm) {
+    @include fontSize(3.2);
+    @include lineHeight(3.2);
+  }
 }
 .home__banner-text {
   margin-top: 0;
@@ -235,18 +315,39 @@ strong {
         width: 100%;
         height: 10%;
         filter: blur(20px);
+
+        @media only screen and (max-width: $screenSm) {
+          left: 50%;
+          width: 40%;
+          filter: blur(15px);
+          transform: translate(-50%, 0);
+        }
       }
       .home__work-box-item {
         left: 20%;
         width: 110%;
         transform: translate(0, -50%);
+
+        @media only screen and (max-width: $screenSm) {
+          left: 50%;
+          width: auto;
+          max-height: 80%;
+          transform: translate(-50%, -50%);
+        }
       }
+    }
+    @media only screen and (max-width: $screenSm) {
+      padding-bottom: 225px;
     }
   }
   &.home__work-box--small {
     margin-bottom: $gutterDef;
     padding-bottom: 51%;
 
+    @media only screen and (max-width: $screenSm) {
+      margin-bottom: $gutterSm;
+      padding-bottom: 225px;
+    }
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -261,6 +362,11 @@ strong {
         left: 50%;
         width: 50%;
         transform: translate(-50%, -50%);
+
+        @media only screen and (max-width: $screenSm) {
+          width: auto;
+          max-height: 80%;
+        }
       }
     }
   }
@@ -277,6 +383,13 @@ strong {
       max-width: 70%;
       max-height: 70%;
       transform: translate(-50%, -50%);
+
+      @media only screen and (max-width: $screenSm) {
+        max-width: 60%;
+      }
+      @media only screen and (max-width: $screenXs) {
+        max-width: 80%;
+      }
     }
   }
 }

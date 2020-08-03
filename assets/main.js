@@ -1,4 +1,18 @@
 $(document).ready(function(){
+	$('.header__mobile-button').click(function(){
+		$('.header__nav-wrapper').fadeIn();
+	});
+	$('.header__mobile-button-close').click(function(){
+		$('.header__nav-wrapper').fadeOut();
+	});
+
+	var mobile = window.matchMedia( "(max-width: 768px)" );
+	if (mobile.matches) {
+		$('.header__nav-link').click(function(){
+			$('.header__nav-wrapper').fadeOut();
+		});
+	}
+
   //Adds smooth scroll to internal links.
 	$('a[href*="#"]:not([href="#"],.no-scroll)').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

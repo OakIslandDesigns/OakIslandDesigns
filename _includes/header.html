@@ -1,28 +1,53 @@
 <header class="header" role="banner">
-  <div class="grid-middle">
+  <div class="container">
+    <div class="grid-middle">
 
-    <div class="col">
-      <div class="header__logo">
-        <img src="{{ "/assets/images/logo-square.svg" | relative_url }}" />
+      <div class="col-3">
+        <div class="header__logo">
+          <img src="{{ "/assets/images/logo-stacked.svg" | relative_url }}" />
+        </div>
       </div>
-    </div>
 
-    <div class="col">
-      <nav class="header__nav" role="navigation">
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#Home">Home</a>
+      <div class="col-9 sm-text-right">
+        <div class="header__mobile-button-wrapper sm-show">
+          <div class="header__mobile-button">
+            <span class="header__mobile-button-text">Menu</span>
+            <img class="header__mobile-button-icon" src="{{ "/assets/images/icon-menu.svg" | relative_url }}" />
+          </div>
         </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#OurWork">Our Work</a>
+        <div class="header__nav-wrapper sm-hide">
+          <div class="header__nav-mobile-header sm-show">
+            <div class="grid-middle">
+              <div class="col-3">
+                <div class="header__logo">
+                  <img src="{{ "/assets/images/logo-stacked.svg" | relative_url }}" />
+                </div>
+              </div>
+              <div class="col-9 sm-text-right">
+                <div class="header__mobile-button-close">
+                  <span class="header__mobile-button-text">Close</span>
+                  <img class="header__mobile-button-icon" src="{{ "/assets/images/icon-close.svg" | relative_url }}" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="header__nav" role="navigation">
+            <div class="header__nav-item">
+              <a class="header__nav-link" href="#Home">Home</a>
+            </div>
+            <div class="header__nav-item">
+              <a class="header__nav-link" href="#OurWork">Our Work</a>
+            </div>
+            <div class="header__nav-item">
+              <a class="header__nav-link" href="#AboutUs">About Us</a>
+            </div>
+            <div class="header__nav-item">
+              <a class="header__nav-link" href="#ContactUs">Contact Us</a>
+            </div>
+          </nav>
         </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#AboutUs">About Us</a>
-        </div>
-        <div class="header__nav-item">
-          <a class="header__nav-link" href="#ContactUs">Contact Us</a>
-        </div>
-      </nav>
-    </div>
+      </div>
 
+    </div>
   </div>
 </header>
