@@ -10,11 +10,11 @@
 /* Variables
 =================================*/
 $colorAccentLight: #ccc;
-$colorAccent: #22FFCE;
+$colorAccent: #12BAB2;
 $colorAccentDark: #000;
 
 $colorDefault: #E8E8E8;
-$colorDark: #28232F;
+$colorDark: #3D2D68;
 $colorLightest: #F8F8F8;
 
 $gutterXs: 15px;
@@ -153,8 +153,9 @@ strong {
   border-top: 5px solid $colorAccent;
 }
 .header__logo {
-  margin: 0;
+  display: block;
   width: 100px;
+  margin: 0;
 }
 .header__nav-wrapper {
   @media only screen and (max-width: $screenSm) {
@@ -215,6 +216,7 @@ strong {
   display: inline-block;
   vertical-align: top;
   padding: 10px 0;
+  cursor: pointer;
 }
 .header__mobile-button-text {
   display: inline-block;
@@ -239,6 +241,9 @@ strong {
   top: $gutterSm;
   right: $gutterSm;
   z-index: 15;
+}
+.header__mobile-button-close {
+  cursor: pointer;
 }
 
 /* Home
