@@ -173,7 +173,9 @@ strong {
   justify-content: flex-end;
 
   @media only screen and (max-width: $screenSm) {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: calc(100vh - 74px);
   }
 }
