@@ -47,4 +47,13 @@ $(document).ready(function(){
 		mainClass: "work-modal work-modal--logo"
 	});
 
+	$('.home__work-box--phone').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: true,
+		fixedContentPos: true,
+		verticalFit: false,
+		mainClass: "work-modal work-modal--mobile"
+	});
+
 });

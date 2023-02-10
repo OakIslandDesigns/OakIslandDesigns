@@ -327,21 +327,21 @@ strong {
     padding-bottom: 108.4388%;
 
     &.home__work-box--imac {
-      &:before {
-        left: 25%;
-        width: 100%;
-        height: 10%;
-        filter: blur(20px);
+      // &:before {
+      //   left: 25%;
+      //   width: 100%;
+      //   height: 10%;
+      //   filter: blur(20px);
 
-        @media only screen and (max-width: $screenSm) {
-          left: 50%;
-          width: 40%;
-          filter: blur(15px);
-          transform: translate(-50%, 0);
-        }
-      }
+      //   @media only screen and (max-width: $screenSm) {
+      //     left: 50%;
+      //     width: 40%;
+      //     filter: blur(15px);
+      //     transform: translate(-50%, 0);
+      //   }
+      // }
       .home__work-box-item {
-        left: 20%;
+        left: 13%;
         width: 110%;
         transform: translate(0, -50%);
 
@@ -369,21 +369,28 @@ strong {
       margin-bottom: 0;
     }
     &.home__work-box--imac {
-      &:before {
-        left: 50%;
-        width: 40%;
-        filter: blur(15px);
-        transform: translate(-50%, 0);
-      }
+      // &:before {
+      //   left: 50%;
+      //   width: 40%;
+      //   filter: blur(15px);
+      //   transform: translate(-50%, 0);
+      // }
       .home__work-box-item {
         left: 50%;
         width: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-55%, -50%);
 
         @media only screen and (max-width: $screenSm) {
           width: auto;
           max-height: 80%;
         }
+      }
+    }
+    &.home__work-box--phone {
+      .home__work-box-item {
+        left: 50%;
+        width: 40%;
+        transform: translate(-50%, 5%);
       }
     }
   }
@@ -462,6 +469,39 @@ strong {
         z-index: 1;
         padding: 50px 0 20px;
         transform: translate(0, -50%);
+      }
+    }
+  }
+  &.work-modal--mobile {
+    &:before {
+      content: 'Mobile Design';
+    }
+    .mfp-content {
+      width: 100%;
+      height: 100vh;
+    }
+    .mfp-figure {
+      height: 100%;
+      figure {
+        height: 100%;
+        overflow: scroll;
+      }
+    }
+    .mfp-img {
+      max-width: 360px;
+      max-height: none !important;
+      padding: 0;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      box-shadow: 0 0 32px rgba(0,0,0,0.15);
+
+      @media only screen and (max-width: $screenSm) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        z-index: 1;
+        transform: translate(-50%, 0);
+        max-width: 100%;
       }
     }
   }
