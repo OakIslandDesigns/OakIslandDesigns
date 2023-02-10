@@ -1,3 +1,9 @@
 _site
 .sass-cache
 .jekyll-metadata
+
+assets/.DS_Store
+
+_sass/.DS_Store
+
+.DS_Store
