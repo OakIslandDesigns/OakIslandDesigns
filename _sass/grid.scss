@@ -16,8 +16,8 @@ $medium: 980px;
 $small: 768px;
 $extrasmall: 480px;
 $tiny: 320px;
-$gl-gutter: 30px;
-$gl-sm-gutter: 20px;
+$gl-gutter: 24px;
+$gl-sm-gutter: 16px;
 
 $postSmall: $small + 1;
 $gl-xs: "screen and (max-width: #{$extrasmall})";
@@ -390,7 +390,7 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
 	[class*="md-show"]{ display: none;}
 	[class*="sm-show"]{ display: none;}
   [class*="xs-show"]{ display: none;}
-  .lg-padding {padding-bottom: 20px;}
+  .lg-padding {padding-bottom: $gl-gutter;}
 }
 @media #{$gl-md}{
   @include hideShow(md);
@@ -399,7 +399,7 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
 	.md-text-left { text-align: left;}
 	.md-text-center { text-align: center;}
   .md-text-right { text-align: right;}
-  .md-padding {padding-bottom: 20px;}
+  .md-padding {padding-bottom: $gl-gutter;}
 }
 @media #{$gl-sm}{
   @include hideShow(sm);
@@ -407,14 +407,14 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
 	.sm-text-left { text-align: left;}
 	.sm-text-center { text-align: center;}
   .sm-text-right { text-align: right;}
-  .sm-padding {padding-bottom: 20px;}
+  .sm-padding {padding-bottom: $gl-sm-gutter;}
 }
 @media #{$gl-xs}{
   @include hideShow(xs);
 	.xs-text-left { text-align: left;}
 	.xs-text-center { text-align: center;}
   .xs-text-right { text-align: right;}
-  .xs-padding {padding-bottom: 20px;}
+  .xs-padding {padding-bottom: $gl-sm-gutter;}
 }
 
 /*==============================================================================

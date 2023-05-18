@@ -2,7 +2,7 @@
 <form class="form {% if include.formClass %}{{ include.formClass }}{% endif %}" id="ContactForm" method="post" action="{{ page.url | absolute_url }}?form=success">
 
   <div class="grid">
-    <div class="col-6_xs-12 padding-xs">
+    <div class="col-6_xs-12 xs-padding">
       <div class="form__input-group">
         <label class="form__label">{{ contactSettings.form.name.label }}{%- if contactSettings.form.name.required -%}*{%- endif -%}</label>
         <input class="form__input" type="text" name="{{ contactSettings.form.name.label }}" placeholder="{{ contactSettings.form.name.placeholder }}" {%- if contactSettings.form.name.required -%}required{%- endif -%} />
@@ -17,7 +17,7 @@
   </div>
 
   <div class="grid">
-    <div class="col-6_xs-12 padding-xs">
+    <div class="col-6_xs-12 xs-padding">
       <div class="form__input-group">
         <label class="form__label">{{ contactSettings.form.email.label }}{%- if contactSettings.form.email.required -%}*{%- endif -%}</label>
         <input class="form__input" type="email" name="_replyto" placeholder="{{ contactSettings.form.email.placeholder }}" {%- if contactSettings.form.email.required -%}required{%- endif -%} />

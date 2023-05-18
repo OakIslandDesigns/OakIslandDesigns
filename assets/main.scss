@@ -17,12 +17,12 @@ $colorDefault: #E8E8E8;
 $colorDark: #3D2D68;
 $colorLightest: #F8F8F8;
 
-$gutterXs: 15px;
-$gutterSm: 20px;
-$gutterMd: 25px;
-$gutterDef: 30px;
-$gutterLg: 35px;
-$gutterXlg: 40px;
+$gutterXs: 12px;
+$gutterSm: 16px;
+$gutterMd: 20px;
+$gutterDef: 24px;
+$gutterLg: 28px;
+$gutterXlg: 32px;
 
 $screenXs: 480px;
 $screenSm: 768px;
@@ -70,6 +70,7 @@ body {
   @include fontAndHeight($fontSizeH6);
   color: $colorDefault;
   background-color: $colorDark;
+  border-top: 4px solid $colorAccent;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -136,7 +137,8 @@ strong {
 .button {
   display: inline-flex;
   align-items: center;
-  padding: 10px 15px;
+  height: 44px;
+  padding: $gutterXs $gutterMd;
   @include fontSize(1.4);
   @include lineHeight(1.4);
   font-weight: 700;
@@ -179,49 +181,26 @@ strong {
 /* Header
 =================================*/
 .header {
-  margin-bottom: 100px;
+  position: relative;
   padding-top: 20px;
-  border-top: 5px solid $colorAccent;
 }
 .header__logo {
   display: block;
   width: 100px;
   margin: 0;
 }
-.header__nav-wrapper {
-  @media only screen and (max-width: $screenSm) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 100%;
-    height: 100%;
-    background-color: $colorDark;
-  }
-}
 .header__nav {
   display: flex;
   justify-content: flex-end;
+  gap: $gutterDef;
 
-  @media only screen and (max-width: $screenSm) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: calc(100vh - 74px);
+  @media only screen and (max-width: $screenXs) {
+    justify-content: flex-start;
+    gap: $gutterSm;
   }
 }
 .header__nav-item {
   flex: 0 1 auto;
-  margin-left: 20px;
-
-  @media only screen and (max-width: $screenSm) {
-    flex: none;
-    display: block;
-    width: 100%;
-    margin-left: 0;
-    padding: 20px 0;
-    text-align: center;
-  }
 }
 .header__nav-link {
   @include fontSize(1.4);
@@ -236,8 +215,8 @@ strong {
     text-shadow: 0 0 10px $colorAccent;
     color: $colorAccent;
   }
-  @media only screen and (max-width: $screenSm) {
-    @include fontSize(2.4);
+  @media only screen and (max-width: $screenXs) {
+    @include lineHeight(4.4);
     letter-spacing: 3px;
   }
 }
@@ -246,15 +225,15 @@ strong {
   border-top: 5px solid $colorAccent;
 }
 .header__mobile-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   vertical-align: top;
   padding: 10px 0;
   cursor: pointer;
 }
 .header__mobile-button-text {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
+  display: block;
   padding-right: 10px;
   @include fontSize(1.4);
   @include lineHeight(1.5);
@@ -265,8 +244,7 @@ strong {
   border-right: 1px solid rgba(255,255,255,0.2);
 }
 .header__mobile-button-icon {
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   height: 15px;
 }
 .header__mobile-button-close-wrapper {
@@ -279,16 +257,32 @@ strong {
   cursor: pointer;
 }
 
+.mm-open__show {
+  display: none;
+}
+.mm-open {
+  .mm-open__hide {
+    display: none;
+  }
+  .mm-open__show {
+    display: block;
+  }
+}
+
 /* Home
 =================================*/
-.home__section {
-  padding-top: $gutterSm;
-  margin-bottom: 180px;
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
 
-  @media only screen and (max-width: $screenSm) {
-    padding-top: $gutterSm;
-    margin-bottom: 80px;
+  @media only screen and (max-width: $screenMd) {
+    gap: 120px;
   }
+}
+//Padding here makes the internal anchor links not cut off the header at the top of the page.
+.home__section {
+  padding-top: $gutterDef;
 }
 .home__section-title {
   margin: 0 0 $gutterDef 0;
@@ -299,6 +293,9 @@ strong {
   @media only screen and (max-width: $screenSm) {
     margin-bottom: $gutterSm;
     @include fontSize(3.2);
+  }
+  @media only screen and (max-width: $screenXs) {
+    @include fontSize(2.6);
   }
 }
 .home__section-text {
@@ -321,6 +318,10 @@ strong {
   @media only screen and (max-width: $screenSm) {
     @include fontSize(3.2);
     @include lineHeight(3.2);
+  }
+  @media only screen and (max-width: $screenXs) {
+    @include fontSize(2.6);
+    @include lineHeight(2.6);
   }
 }
 .home__banner-text {
@@ -595,7 +596,11 @@ strong {
 .form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: $gutterDef;
+
+  @media only screen and (max-width: $screenXs) {
+    gap: $gutterSm;
+  }
 
   &__label {
     display: block;
