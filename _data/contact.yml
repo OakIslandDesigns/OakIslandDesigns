@@ -1,0 +1,23 @@
+form:
+  name:
+    label: Name
+    required: true
+    placeholder: John Smith
+  company:
+    label: Company/Organization
+    required: false
+    placeholder: John's Company
+  email:
+    label: Email
+    required: true
+    placeholder: john.smith@email.com
+  phone:
+    label: Phone Number
+    required: true
+    placeholder: 204-999-9999
+  message:
+    label: Message
+    required: true
+    placeholder: Hello, I'm inquiring about...
+  button:
+    text: Send Message

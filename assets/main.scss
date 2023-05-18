@@ -5,7 +5,7 @@
 @import "grid";
 @import "normalize";
 @import "magnific-popup";
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Montserrat:wght@700;800&display=swap');
 
 /* Variables
 =================================*/
@@ -80,6 +80,7 @@ body {
 }
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
 }
 h1, .h1 {@include fontAndHeight($fontSizeH1);}
 h2, .h2 {@include fontAndHeight($fontSizeH2);}
@@ -93,10 +94,17 @@ a {
     text-decoration: underline;
   }
 }
-p {
-  @include fontSize(1.6);
-  @include lineHeight(2.6);
-  margin-bottom: $gutterMd;
+p, li {
+  margin-top: 0;
+  margin-bottom: $gutterSm;
+  @include fontSize(1.8);
+  @include lineHeight(2.4);
+}
+ul {
+  margin-bottom: $gutterSm;
+}
+li {
+  margin-bottom: 10px;
 }
 img {
   display: block;
@@ -108,21 +116,44 @@ strong {
 
 /* Global
 =================================*/
+// .button {
+//   display: block;
+//   @include fontSize(1.4);
+//   @include lineHeight(1.4);
+//   font-weight: 700;
+//   letter-spacing: 2px;
+//   text-transform: uppercase;
+//   text-shadow: 0 0 10px $colorDefault;
+//   color: $colorDefault;
+//   transition: all .2s ease-in-out;
+  
+//   &:hover {
+//     text-decoration: none;
+//     text-shadow: 0 0 10px $colorAccent;
+//     color: $colorAccent;
+//   }
+// }
 .button {
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 15px;
   @include fontSize(1.4);
   @include lineHeight(1.4);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px $colorDefault;
-  color: $colorDefault;
+  color: $colorLightest;
+  background-color: $colorAccent;
+  border: 0;
+  cursor: pointer;
   transition: all .2s ease-in-out;
   
   &:hover {
     text-decoration: none;
-    text-shadow: 0 0 10px $colorAccent;
-    color: $colorAccent;
+    opacity: 0.75;
+  }
+  i {
+    margin-left: 5px;
   }
 }
 .un-list {
@@ -271,12 +302,6 @@ strong {
   }
 }
 .home__section-text {
-  p {
-    margin-top: 0;
-    margin-bottom: $gutterSm;
-    @include fontSize(1.8);
-    @include lineHeight(2.4);
-  }
   &.home__section-text--small {
     p {
       @include fontSize(1.4);
@@ -561,6 +586,48 @@ strong {
   .mfp-figure {
     figure {
       background-color: #fff;
+    }
+  }
+}
+
+/* Contact
+=================================*/
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+    @include fontSize(1.4);
+    @include lineHeight(1.4);
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  &__input {
+    display: block;
+    height: 44px;
+    width: 100%;
+    padding: 0 12px;
+    @include fontSize(1.8);
+    @include lineHeight(2.4);
+    color: $colorLightest;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid $colorLightest;
+
+    &:focus-visible {
+      outline-color: $colorAccent;
+    }
+
+    &::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    &--textarea {
+      padding: 12px;
+      height: 160px;
     }
   }
 }

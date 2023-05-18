@@ -1,0 +1,93 @@
+{%- assign contactSettings = site.data.contact -%}
+<form class="form {% if include.formClass %}{{ include.formClass }}{% endif %}" id="ContactForm" method="post" action="{{ page.url | absolute_url }}?form=success">
+
+  <div class="grid">
+    <div class="col-6_xs-12 padding-xs">
+      <div class="form__input-group">
+        <label class="form__label">{{ contactSettings.form.name.label }}{%- if contactSettings.form.name.required -%}*{%- endif -%}</label>
+        <input class="form__input" type="text" name="{{ contactSettings.form.name.label }}" placeholder="{{ contactSettings.form.name.placeholder }}" {%- if contactSettings.form.name.required -%}required{%- endif -%} />
+      </div>
+    </div>
+    <div class="col-6_xs-12">
+      <div class="form__input-group">
+        <label class="form__label">{{ contactSettings.form.company.label }}{%- if contactSettings.form.company.required -%}*{%- endif -%}</label>
+        <input class="form__input" type="text" name="Company/Organization" placeholder="{{ contactSettings.form.company.placeholder }}" {%- if contactSettings.form.company.required -%}required{%- endif -%} />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-6_xs-12 padding-xs">
+      <div class="form__input-group">
+        <label class="form__label">{{ contactSettings.form.email.label }}{%- if contactSettings.form.email.required -%}*{%- endif -%}</label>
+        <input class="form__input" type="email" name="_replyto" placeholder="{{ contactSettings.form.email.placeholder }}" {%- if contactSettings.form.email.required -%}required{%- endif -%} />
+      </div>
+    </div>
+    <div class="col-6_xs-12">
+      <div class="form__input-group">
+        <label class="form__label">{{ contactSettings.form.phone.label }}{%- if contactSettings.form.phone.required -%}*{%- endif -%}</label>
+        <input class="form__input" type="phone" name="{{ contactSettings.form.phone.label }}" placeholder="{{ contactSettings.form.phone.placeholder }}" {%- if contactSettings.form.phone.required -%}required{%- endif -%} />
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-12">
+      <div class="form__input-group">
+        <label class="form__label">{{ contactSettings.form.message.label }}{%- if contactSettings.form.message.required -%}*{%- endif -%}</label>
+        <textarea class="form__input form__input--textarea" name="{{ contactSettings.form.message.label }}" placeholder="{{ contactSettings.form.message.placeholder }}" {%- if contactSettings.form.message.required -%}required{%- endif -%}></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="col-12">
+      <div class="form__input-group">
+        <input type="hidden" name="inbox_key" value="oak-island-designs-contact">
+        <input type="hidden" name="_subject" value="Oak Island Designs Inquiry">
+        <input type="text" name="_gotcha" style="display: none;">
+        <button class="button button--dark" type="submit">{{ contactSettings.form.button.text }}<i class="fa fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
+</form>
+
+<script src="https://www.google.com/recaptcha/api.js?render=6LeJoAQmAAAAAJHz3LCduNUhPmTUb4_xkAaxgsCt"></script>
+<script>
+  var submitted = false;
+  var tokenCreated = false;
+  var formEl = document.getElementById('ContactForm');
+
+  formEl.addEventListener("submit", function (event) {
+
+    // Check if the recaptcha exists
+    if (!tokenCreated) {
+
+      // Prevent submission
+      event.preventDefault();
+
+      // Prevent more than one submission
+      if (!submitted) {
+        submitted = true;
+        // needs for recaptacha ready
+        grecaptcha.ready(function() {
+          // do request for recaptcha token
+          // response is promise with passed token
+          grecaptcha.execute('6LeJoAQmAAAAAJHz3LCduNUhPmTUb4_xkAaxgsCt', {action: 'create_comment'}).then(function (token) {
+            // add token to form
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = "g-recaptcha-response";
+            input.value = token;
+            formEl.appendChild(input);
+
+            // resubmit the form
+            tokenCreated = true;
+            formEl.submit();
+          });
+        });
+      }
+    }
+  });
+</script>
