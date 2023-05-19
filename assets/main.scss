@@ -66,6 +66,7 @@ html {
   font-size: 62.5%;
 }
 body {
+  position: relative;
   font-family: 'Karla', sans-serif;
   @include fontAndHeight($fontSizeH6);
   color: $colorDefault;
@@ -187,6 +188,7 @@ strong {
 .header__logo {
   display: block;
   width: 100px;
+  height: 49px;
   margin: 0;
 }
 .header__nav {
@@ -634,6 +636,23 @@ strong {
       padding: 12px;
       height: 160px;
     }
+  }
+}
+.contact-message {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  z-index: 2;
+  display: none;
+  width: 100%;
+  text-align: center;
+  background-color: #66b166;
+
+  p {
+    margin: 0;
+    padding: 8px 0;
+    font-weight: 400;
+    color: $colorLightest;
   }
 }
 
