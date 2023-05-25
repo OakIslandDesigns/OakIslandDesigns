@@ -1,4 +1,5 @@
 form:
+  success_message_text: Thanks for your message! I'll get back to you within 24 hours.
   name:
     label: Name
     required: true

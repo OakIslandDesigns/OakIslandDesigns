@@ -1,0 +1,74 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "normalize";
+@import "grid";
+
+/* Variables
+=================================*/
+:root {
+  --color-accent: red;
+  --color-background: blue;
+  --color-text: #000;
+
+  --font-size-normal: 1.8;
+  --font-size-h6: 1.8;
+  --font-size-h5: 2.0;
+  --font-size-h4: 2.4;
+  --font-size-h3: 2.8;
+  --font-size-h2: 4.0;
+  --font-size-h1: 4.8;
+
+  --gutter-1: 4px;
+  --gutter-2: 8px;
+  --gutter-3: 12px;
+  --gutter-4: 16px;
+  --gutter-5: 20px;
+  --gutter-6: 24px;
+  --gutter-7: 28px;
+  --gutter-8: 32px;
+
+  --screen-xs: 480px;
+  --screen-sm: 768px;
+  --screen-md: 1024px;
+  --screen-lg: 1280px;
+  --screen-xlg: 1440px;
+}
+
+/* Mixins
+=================================*/
+/* Used to set font sizes in REMs
+with a Pixel fallback Usage:
+@include font-size(13) */
+@mixin fontAndHeight($size:1.6, $line: $size * 1.25){
+  font-size:   ($size * 10) + px;
+  line-height: ($line * 10) + px;
+  font-size:   $size + rem;
+  line-height: $line + rem;
+}
+@mixin fontSize($size:1.6){
+  font-size:   ($size * 10) + px;
+  font-size:   $size + rem;
+}
+@mixin lineHeight($line: 1.6){
+  line-height: ($line * 10) + px;
+  line-height: $line + rem;
+}
+
+/* Default
+=================================*/
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.success-message {
+  display: none;
+}

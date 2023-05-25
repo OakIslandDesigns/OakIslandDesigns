@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
 
   {% include head.html %}
 
-  <body class="template-{{ page.layout | downcase | escape }}">
-    {% include contact-message.html %}
-    <div class="wrapper">
-      
-      <div class="content container">
-        {% include header.html %}
-        {{ content }}
-      </div>
+  <body class="layout-{{ page.layout }}">
 
-      {% include footer.html %}
-      
-    </div>
+    {% include header.html %}
+
+    <main class="content" aria-label="Content">
+      {% include contact-message.html %}
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+    {% include foot.html %}
+
   </body>
 
 </html>
