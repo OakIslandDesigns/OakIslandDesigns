@@ -1,0 +1,49 @@
+{%- assign footer = site.data.global.footer -%}
+<footer class="footer">
+  <div class="footer__section">
+    <div class="container">
+      <div class="grid-spaceBetween footer__grid">
+
+        <div class="col">
+          <div class="footer__description">
+            {{ footer.description | markdownify }}
+          </div>
+        </div>
+
+        <div class="col-hug">
+          <div class="footer__column">
+            <h6 class="h5 footer__column-heading">{{ footer.hours.title }}</h6>
+            <ul class="footer__column-list">
+              {%- for item in footer.hours.items -%}
+                <li class="footer__column-list-item">
+                  <p class="footer__column-list-item-text">{{ item.label }}</p>
+                  <p class="footer__column-list-item-text">{{ item.text }}</p>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-hug">
+          <div class="footer__column">
+            <h6 class="h5 footer__column-heading">{{ footer.contact.title }}</h6>
+            <ul class="footer__column-list">
+              {%- for item in footer.contact.items -%}
+                <li class="footer__column-list-item">
+                  <a class="button button--subtle footer__column-list-item-link" href="{{ item.link }}"><i class="fas fa-{{ item.icon }}"></i>{{ item.text }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyright">
+    <div class="container">
+      <p class="sm">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
+    </div>
+  </div>
+
+</footer>

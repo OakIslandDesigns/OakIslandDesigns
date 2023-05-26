@@ -21,48 +21,14 @@ if(getUrlParameter('form') == "success"){
 	contactMessage.delay(5000).fadeOut(300, "linear");
 }
 
-$(document).ready(function(){
-  //Adds smooth scroll to internal links.
-	$('a[href*="#"]:not([href="#"],.no-scroll)').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      console.log(target);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-      console.log(target.offset().top);
-			if (target.length) {
-				$('.wrapper').animate({
-					scrollTop: target.offset().top
-				}, 500);
-				return false;
-			}
-		}
-	});
+/* Header styling on scroll
+======================================= */
+window.addEventListener('scroll', function() {
+  var header = document.querySelector('.header');
 
-	$('.home__work-box--imac').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: true,
-		fixedContentPos: true,
-		verticalFit: false,
-		mainClass: "work-modal work-modal--mockup"
-	});
-
-	$('.home__work-box--logo').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: true,
-		fixedContentPos: true,
-		verticalFit: false,
-		mainClass: "work-modal work-modal--logo"
-	});
-
-	$('.home__work-box--phone').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: true,
-		fixedContentPos: true,
-		verticalFit: false,
-		mainClass: "work-modal work-modal--mobile"
-	});
-
+  if (window.pageYOffset > 0) {
+    header.classList.add('header--scrolled');
+  } else {
+    header.classList.remove('header--scrolled');
+  }
 });

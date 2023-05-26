@@ -1,3 +1,28 @@
+{%- assign header = site.data.global.header -%}
 <header class="header" role="banner">
-  
+  <div class="container">
+    <div class="grid-spaceBetween-middle">
+      <div class="col-left">
+        <a class="header__logo" href="/" title="Homepage{{ site.title | prepend: ' | ' }}">
+          <img class="block" src="/assets/images/logo.svg" alt="Oak Island Designs Logo"/>
+        </a>
+      </div>
+      <div class="col">
+        <nav>
+          <ul class="unlist header__nav">
+            {%- for link in header.navigation -%}
+              <li class="header__nav-item">
+                <a class="button button--subtle header__nav-item-link" href="{{ link.link }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      </div>
+      <div class="col-right">
+        <a class="button" href="{{ header.button.link }}" title="{{ header.button.title }}{{ site.title | prepend: ' | ' }}">
+          {%- if header.button.icon != blank -%}<i class="fas fa-{{ header.button.icon }}"></i>{%- endif -%}{{ header.button.title }}
+        </a>
+      </div>
+    </div>
+  </div>
 </header>

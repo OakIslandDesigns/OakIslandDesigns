@@ -2,38 +2,64 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "normalize";
+@import "reset";
 @import "grid";
+@import "fonts";
 
 /* Variables
 =================================*/
+$font-size-normal: 1.8;
+$font-size-button: 1.4;
+$font-size-h6: 1.4;
+$font-size-h5: 1.8;
+$font-size-h4: 2.4;
+$font-size-h3: 3.2;
+$font-size-h2: 4.0;
+$font-size-h1: 4.8;
+
 :root {
-  --color-accent: red;
-  --color-background: blue;
-  --color-text: #000;
+  --color-accent: #00BAB3;
+  --color-secondary: #3D2D68;
+  --color-secondary-dark: #312554;
+  --color-lightest: #fff;
+  --color-text: var(--color-lightest);
 
-  --font-size-normal: 1.8;
-  --font-size-h6: 1.8;
-  --font-size-h5: 2.0;
-  --font-size-h4: 2.4;
-  --font-size-h3: 2.8;
-  --font-size-h2: 4.0;
-  --font-size-h1: 4.8;
+  --font-family-main: 'Biennale';
+  --font-weight-normal: normal;
+  --font-weight-semibold: 600;
+  --font-weight-black: 800;
 
-  --gutter-1: 4px;
-  --gutter-2: 8px;
-  --gutter-3: 12px;
-  --gutter-4: 16px;
-  --gutter-5: 20px;
-  --gutter-6: 24px;
-  --gutter-7: 28px;
-  --gutter-8: 32px;
+  --font-size-normal: $font-size-normal;
+  --font-size-button: $font-size-button;
+  --font-size-h6: $font-size-h6;
+  --font-size-h5: $font-size-h5;
+  --font-size-h4: $font-size-h4;
+  --font-size-h3: $font-size-h3;
+  --font-size-h2: $font-size-h2;
+  --font-size-h1: $font-size-h1;
+
+  --line-height-heading: 110%;
+  --line-height-text: 150%;
+
+  --touch-height: 44px;
+  --border-radius: 4px;
+
+  --gap-sm: 8px;
+  --gap-md: 16px;
+  --gap-lg: 24px;
+  --gap-xl: 32px;
+  --gap-xxl: 40px;
+
+  --home-section-spacing: 120px;
 
   --screen-xs: 480px;
   --screen-sm: 768px;
   --screen-md: 1024px;
   --screen-lg: 1280px;
-  --screen-xlg: 1440px;
+  --screen-xl: 1440px;
+
+  --transition: all .2s ease-in-out;
+  --drop-shadow-sm: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.35));
 }
 
 /* Mixins
@@ -41,19 +67,21 @@
 /* Used to set font sizes in REMs
 with a Pixel fallback Usage:
 @include font-size(13) */
-@mixin fontAndHeight($size:1.6, $line: $size * 1.25){
-  font-size:   ($size * 10) + px;
-  line-height: ($line * 10) + px;
-  font-size:   $size + rem;
-  line-height: $line + rem;
-}
-@mixin fontSize($size:1.6){
+@mixin font-size($size:1.8){
   font-size:   ($size * 10) + px;
   font-size:   $size + rem;
 }
-@mixin lineHeight($line: 1.6){
-  line-height: ($line * 10) + px;
-  line-height: $line + rem;
+
+/* Animations
+=================================*/
+.animate-spin {animation: rotateY-anim 10s ease-in-out infinite;}
+@keyframes rotateY-anim {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
 }
 
 /* Default
@@ -66,9 +94,236 @@ html {
 }
 body {
   position: relative;
+  font-family: 'Biennale', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include font-size($font-size-normal);
+  line-height: var(--line-height-text);
+  color: var(--color-text);
+  background-color: var(--color-secondary);
+}
+
+/* Helpers
+=================================*/
+.unlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.block {
+  display: block;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* General
+=================================*/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-black);
+  color: var(--color-accent);
+}
+h1, .h1 {@include font-size($font-size-h1);}
+h2, .h2 {@include font-size($font-size-h2);}
+h3, .h3 {@include font-size($font-size-h3);}
+h4, .h4 {@include font-size($font-size-h4);}
+h5, .h5 {@include font-size($font-size-h5);}
+h6, .h6 {@include font-size($font-size-h6);}
+.buttons {
+  display: flex;
+  gap: var(--gap-lg);
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-sm);
+  min-height: var(--touch-height);
+  padding: 0 var(--gap-md);
+  @include font-size($font-size-button);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  color: var(--color-text);
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+  .button:hover {
+    opacity: 0.75;
+  }
+  .button--secondary {
+    background-color: var(--color-secondary);
+  }
+  .button--subtle {
+    padding-right: 0;
+    padding-left: 0;
+    background-color: transparent;
+  }
+    .button--subtle:hover {
+      color: var(--color-accent);
+      opacity: 1;
+    }
+strong {
+  font-weight: var(--font-weight-black);
+}
+.sm {
+  @include font-size($font-size-button);
 }
 .success-message {
   display: none;
 }
+
+/* Header
+=================================*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  padding: var(--gap-lg) 0;
+  transition: var(--transition);
+}
+  .header--scrolled {
+    background-color: var(--color-secondary);
+    filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.2));
+  }
+  .header__logo {
+    display: block;
+  }
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-lg);
+  }
+
+/* Home
+=================================*/
+.home-sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 120px;
+  padding-top: var(--home-section-spacing);
+  padding-bottom: var(--home-section-spacing);
+}
+
+/* Home: Hero
+=================================*/
+.hero-wrapper {
+  background-image: url('/assets/images/background-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+  .hero {
+    padding-top: 160px;
+    padding-bottom: 80px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+  }
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-lg);
+    }
+      .hero__content-words {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap-md);
+      }
+    .hero__logo-image {
+      margin: 0 auto;
+      filter: drop-shadow(0px 0px 64px rgba(0, 0, 0, 0.2));
+    }
+
+/* Home: Clients
+=================================*/
+.home-clients {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+  .home-clients__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    padding: var(--gap-md) var(--gap-lg);
+    background-color: var(--color-lightest);
+    border-radius: var(--border-radius);
+  }
+    .home-clients__logo-image {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+/* Home: Value Propositions
+=================================*/
+.home-value-props__illustration {
+  display: flex;
+  justify-content: center;
+}
+.home-value-props__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+/* Home: CTA
+=================================*/
+.home-cta-wrapper {
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius);
+}
+  .home-cta {
+    width: 100%;
+    min-width: 900px;
+    padding: var(--gap-xl);
+    background-image: url('/assets/images/background-pattern_cta.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+    .home-cta__content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+      .home-cta__content-heading {
+        color: var(--color-lightest);
+      }
+      .home-cta__content-subheading {
+        color: var(--color-secondary);
+      }
+
+/* Footer
+=================================*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxl);
+  padding: var(--gap-xxl) 0;
+  background-color: var(--color-secondary-dark);
+}
+  .footer__grid {
+    gap: 80px;
+  }
+  .footer__column-heading {
+    margin-bottom: var(--gap-sm);
+  } 
+    .footer__column-list {
+      display: flex;
+      flex-direction: column;
+    }
+      .footer__column-list-item {
+        display: flex;
+        gap: var(--gap-md);
+      }
+        .footer__column-list-item-text {
+          line-height: var(--touch-height);
+        }

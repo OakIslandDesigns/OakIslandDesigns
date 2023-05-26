@@ -1,0 +1,32 @@
+
+header:
+  navigation:
+    - title: Portfolio
+      link: /portfolio/
+    - title: About Us
+      link: /about-us/
+    - title: Contact Us
+      link: /contact-us/
+  button:
+    icon: message-dollar
+    title: Get a Free Quote
+    link: /free-quote/
+footer:
+  description: >-
+    Welcome to Oak Island Designs, your go-to designer for beautiful websites and logos tailored for small to medium businesses. We believe that every brand deserves an extraordinary online presence that leaves a lasting impression.
+  hours:
+    title: Hours
+    items:
+      - label: Mon-Sat
+        text: 7am - 9pm
+      - label: Sunday
+        text: Closed
+  contact:
+    title: Contact
+    items:
+      - icon: phone
+        text: "204.955.0092"
+        link: "tel:+12049550092"
+      - icon: paper-plane
+        text: info@oakislanddesigns.com
+        link: "mailto: info@oakislanddesigns.com"

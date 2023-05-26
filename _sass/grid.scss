@@ -10,16 +10,16 @@ Y88b  d88P 888  T88b    888   888  .d88P
 
 
 // Variables
-$container: 980px;
-$large: 980px;
-$medium: 980px;
+$container: 1280px;
+$large: 1280px;
+$medium: 1024px;
 $small: 768px;
 $extrasmall: 480px;
-$tiny: 320px;
+$tiny: 360px;
 $gl-gutter: 24px;
-$gl-sm-gutter: 16px;
 
 $postSmall: $small + 1;
+$gl-ty: "screen and (max-width: #{$tiny})";
 $gl-xs: "screen and (max-width: #{$extrasmall})";
 $gl-sm: "screen and (max-width: #{$small})";
 $gl-md: "screen and (max-width: #{$medium})";
@@ -46,34 +46,21 @@ $glp_col-10-12: calc(100% / 10);
 $glp_col-11-12: calc(100% / 11);
 
 // Function to generate the grid by number
-// @mixin makeGridByNumber($grid)
-// {
-//   [class*="#{$grid}-1"] > .col, [class*="#{$grid}-1"] > [class*='col-']{ -webkit-flex-basis: $glp_col-12; -ms-flex-preferred-size: $glp_col-12; flex-basis: $glp_col-12; max-width: $glp_col-12; }
-//   [class*="#{$grid}-2"] > .col, [class*="#{$grid}-2"] > [class*='col-']{ -webkit-flex-basis: $glp_col-6; -ms-flex-preferred-size: $glp_col-6; flex-basis: $glp_col-6; max-width: $glp_col-6; }
-//   [class*="#{$grid}-3"] > .col, [class*="#{$grid}-3"] > [class*='col-']{ -webkit-flex-basis: $glp_col-4; -ms-flex-preferred-size: $glp_col-4; flex-basis: $glp_col-4; max-width: $glp_col-4; }
-//   [class*="#{$grid}-4"] > .col, [class*="#{$grid}-4"] > [class*='col-']{ -webkit-flex-basis: $glp_col-3; -ms-flex-preferred-size: $glp_col-3; flex-basis: $glp_col-3; max-width: $glp_col-3; }
-//   [class*="#{$grid}-5"] > .col, [class*="#{$grid}-5"] > [class*='col-']{ -webkit-flex-basis: $glp_col-5-12; -ms-flex-preferred-size: $glp_col-5-12; flex-basis: $glp_col-5-12; max-width: $glp_col-5-12; }
-//   [class*="#{$grid}-6"] > .col, [class*="#{$grid}-6"] > [class*='col-']{ -webkit-flex-basis: $glp_col-2; -ms-flex-preferred-size: $glp_col-2; flex-basis: $glp_col-2; max-width: $glp_col-2; }
-//   [class*="#{$grid}-7"] > .col, [class*="#{$grid}-7"] > [class*='col-']{ -webkit-flex-basis: $glp_col-7-12; -ms-flex-preferred-size: $glp_col-7-12; flex-basis: $glp_col-7-12; max-width: $glp_col-7-12; }
-//   [class*="#{$grid}-8"] > .col, [class*="#{$grid}-8"] > [class*='col-']{ -webkit-flex-basis: $glp_col-8-12; -ms-flex-preferred-size: $glp_col-8-12; flex-basis: $glp_col-8-12; max-width: $glp_col-8-12; }
-//   [class*="#{$grid}-9"] > .col, [class*="#{$grid}-9"] > [class*='col-']{ -webkit-flex-basis: $glp_col-9-12; -ms-flex-preferred-size: $glp_col-9-12; flex-basis: $glp_col-9-12; max-width: $glp_col-9-12; }
-//   [class*="#{$grid}-10"] > .col, [class*="#{$grid}-10"] > [class*='col-']{ -webkit-flex-basis: $glp_col-10-12; -ms-flex-preferred-size: $glp_col-10-12; flex-basis: $glp_col-10-12; max-width: $glp_col-10-12; }
-//   [class*="#{$grid}-11"] > .col, [class*="#{$grid}-11"] > [class*='col-']{ -webkit-flex-basis: $glp_col-11-12; -ms-flex-preferred-size: $glp_col-11-12; flex-basis: $glp_col-11-12; max-width: $glp_col-11-12; }
-//   [class*="#{$grid}-12"] > .col, [class*="#{$grid}-12"] > [class*='col-']{ -webkit-flex-basis: $glp_col-1; -ms-flex-preferred-size: $glp_col-1; flex-basis: $glp_col-1; max-width: $glp_col-1; }
-
-//   html.lte-ie9 [class*="#{$grid}-1"] > .col, html.lte-ie9 [class*="#{$grid}-1"] > [class*='col-']{ -webkit-flex-basis: $glp_col-12; -ms-flex-preferred-size: $glp_col-12; flex-basis: $glp_col-12; width: $glp_col-12; }
-//   html.lte-ie9 [class*="#{$grid}-2"] > .col, html.lte-ie9 [class*="#{$grid}-2"] > [class*='col-']{ -webkit-flex-basis: $glp_col-6; -ms-flex-preferred-size: $glp_col-6; flex-basis: $glp_col-6; width: $glp_col-6; }
-//   html.lte-ie9 [class*="#{$grid}-3"] > .col, html.lte-ie9 [class*="#{$grid}-3"] > [class*='col-']{ -webkit-flex-basis: $glp_col-4; -ms-flex-preferred-size: $glp_col-4; flex-basis: $glp_col-4; width: $glp_col-4; }
-//   html.lte-ie9 [class*="#{$grid}-4"] > .col, html.lte-ie9 [class*="#{$grid}-4"] > [class*='col-']{ -webkit-flex-basis: $glp_col-3; -ms-flex-preferred-size: $glp_col-3; flex-basis: $glp_col-3; width: $glp_col-3; }
-//   html.lte-ie9 [class*="#{$grid}-5"] > .col, html.lte-ie9 [class*="#{$grid}-5"] > [class*='col-']{ -webkit-flex-basis: $glp_col-5-12; -ms-flex-preferred-size: $glp_col-5-12; flex-basis: $glp_col-5-12; width: $glp_col-5-12; }
-//   html.lte-ie9 [class*="#{$grid}-6"] > .col, html.lte-ie9 [class*="#{$grid}-6"] > [class*='col-']{ -webkit-flex-basis: $glp_col-2; -ms-flex-preferred-size: $glp_col-2; flex-basis: $glp_col-2; width: $glp_col-2; }
-//   html.lte-ie9 [class*="#{$grid}-7"] > .col, html.lte-ie9 [class*="#{$grid}-7"] > [class*='col-']{ -webkit-flex-basis: $glp_col-7-12; -ms-flex-preferred-size: $glp_col-7-12; flex-basis: $glp_col-7-12; width: $glp_col-7-12; }
-//   html.lte-ie9 [class*="#{$grid}-8"] > .col, html.lte-ie9 [class*="#{$grid}-8"] > [class*='col-']{ -webkit-flex-basis: $glp_col-8-12; -ms-flex-preferred-size: $glp_col-8-12; flex-basis: $glp_col-8-12; width: $glp_col-8-12; }
-//   html.lte-ie9 [class*="#{$grid}-9"] > .col, html.lte-ie9 [class*="#{$grid}-9"] > [class*='col-']{ -webkit-flex-basis: $glp_col-9-12; -ms-flex-preferred-size: $glp_col-9-12; flex-basis: $glp_col-9-12; width: $glp_col-9-12; }
-//   html.lte-ie9 [class*="#{$grid}-10"] > .col, html.lte-ie9 [class*="#{$grid}-10"] > [class*='col-']{ -webkit-flex-basis: $glp_col-10-12; -ms-flex-preferred-size: $glp_col-10-12; flex-basis: $glp_col-10-12; width: $glp_col-10-12; }
-//   html.lte-ie9 [class*="#{$grid}-11"] > .col, html.lte-ie9 [class*="#{$grid}-11"] > [class*='col-']{ -webkit-flex-basis: $glp_col-11-12; -ms-flex-preferred-size: $glp_col-11-12; flex-basis: $glp_col-11-12; width: $glp_col-11-12; }
-//   html.lte-ie9 [class*="#{$grid}-12"] > .col, html.lte-ie9 [class*="#{$grid}-12"] > [class*='col-']{ -webkit-flex-basis: $glp_col-1; -ms-flex-preferred-size: $glp_col-1; flex-basis: $glp_col-1; width: $glp_col-1; }
-// }
+@mixin makeGridByNumber($grid)
+{
+  [class*="#{$grid}-1"] > .col, [class*="#{$grid}-1"] > [class*='col-']{ -webkit-flex-basis: $glp_col-12; -ms-flex-preferred-size: $glp_col-12; flex-basis: $glp_col-12; max-width: $glp_col-12; }
+  [class*="#{$grid}-2"] > .col, [class*="#{$grid}-2"] > [class*='col-']{ -webkit-flex-basis: $glp_col-6; -ms-flex-preferred-size: $glp_col-6; flex-basis: $glp_col-6; max-width: $glp_col-6; }
+  [class*="#{$grid}-3"] > .col, [class*="#{$grid}-3"] > [class*='col-']{ -webkit-flex-basis: $glp_col-4; -ms-flex-preferred-size: $glp_col-4; flex-basis: $glp_col-4; max-width: $glp_col-4; }
+  [class*="#{$grid}-4"] > .col, [class*="#{$grid}-4"] > [class*='col-']{ -webkit-flex-basis: $glp_col-3; -ms-flex-preferred-size: $glp_col-3; flex-basis: $glp_col-3; max-width: $glp_col-3; }
+  [class*="#{$grid}-5"] > .col, [class*="#{$grid}-5"] > [class*='col-']{ -webkit-flex-basis: $glp_col-5-12; -ms-flex-preferred-size: $glp_col-5-12; flex-basis: $glp_col-5-12; max-width: $glp_col-5-12; }
+  [class*="#{$grid}-6"] > .col, [class*="#{$grid}-6"] > [class*='col-']{ -webkit-flex-basis: $glp_col-2; -ms-flex-preferred-size: $glp_col-2; flex-basis: $glp_col-2; max-width: $glp_col-2; }
+  [class*="#{$grid}-7"] > .col, [class*="#{$grid}-7"] > [class*='col-']{ -webkit-flex-basis: $glp_col-7-12; -ms-flex-preferred-size: $glp_col-7-12; flex-basis: $glp_col-7-12; max-width: $glp_col-7-12; }
+  [class*="#{$grid}-8"] > .col, [class*="#{$grid}-8"] > [class*='col-']{ -webkit-flex-basis: $glp_col-8-12; -ms-flex-preferred-size: $glp_col-8-12; flex-basis: $glp_col-8-12; max-width: $glp_col-8-12; }
+  [class*="#{$grid}-9"] > .col, [class*="#{$grid}-9"] > [class*='col-']{ -webkit-flex-basis: $glp_col-9-12; -ms-flex-preferred-size: $glp_col-9-12; flex-basis: $glp_col-9-12; max-width: $glp_col-9-12; }
+  [class*="#{$grid}-10"] > .col, [class*="#{$grid}-10"] > [class*='col-']{ -webkit-flex-basis: $glp_col-10-12; -ms-flex-preferred-size: $glp_col-10-12; flex-basis: $glp_col-10-12; max-width: $glp_col-10-12; }
+  [class*="#{$grid}-11"] > .col, [class*="#{$grid}-11"] > [class*='col-']{ -webkit-flex-basis: $glp_col-11-12; -ms-flex-preferred-size: $glp_col-11-12; flex-basis: $glp_col-11-12; max-width: $glp_col-11-12; }
+  [class*="#{$grid}-12"] > .col, [class*="#{$grid}-12"] > [class*='col-']{ -webkit-flex-basis: $glp_col-1; -ms-flex-preferred-size: $glp_col-1; flex-basis: $glp_col-1; max-width: $glp_col-1; }
+}
 
 // Function to generate the grid by columns
 @mixin makeCol($col)
@@ -94,72 +81,52 @@ $glp_col-11-12: calc(100% / 11);
 		> [class*="#{$col}-first"]{ -webkit-order: -1; -ms-flex-order: -1; order: -1;}
 		> [class*="#{$col}-last"]{ -webkit-order: 1; -ms-flex-order: 1; order: 1;}
   }
-  html.lte-ie9 [class*='grid'] {
-    > [class*="#{$col}-1"]{ -webkit-flex-basis: $glp_col-1; -ms-flex-preferred-size: $glp_col-1; flex-basis: $glp_col-1;width: $glp_col-1; }
-    > [class*="#{$col}-2"]{ -webkit-flex-basis: $glp_col-2; -ms-flex-preferred-size: $glp_col-2; flex-basis: $glp_col-2;width: $glp_col-2; }
-    > [class*="#{$col}-3"]{ -webkit-flex-basis: $glp_col-3; -ms-flex-preferred-size: $glp_col-3; flex-basis: $glp_col-3;width: $glp_col-3; }
-    > [class*="#{$col}-4"]{ -webkit-flex-basis: $glp_col-4; -ms-flex-preferred-size: $glp_col-4; flex-basis: $glp_col-4;width: $glp_col-4;}
-    > [class*="#{$col}-5"]{ -webkit-flex-basis: $glp_col-5; -ms-flex-preferred-size: $glp_col-5; flex-basis: $glp_col-5;width: $glp_col-5;}
-    > [class*="#{$col}-6"]{ -webkit-flex-basis: $glp_col-6; -ms-flex-preferred-size: $glp_col-6; flex-basis: $glp_col-6;width: $glp_col-6;}
-    > [class*="#{$col}-7"]{ -webkit-flex-basis: $glp_col-7; -ms-flex-preferred-size: $glp_col-7; flex-basis: $glp_col-7;width: $glp_col-7;}
-    > [class*="#{$col}-8"]{ -webkit-flex-basis: $glp_col-8; -ms-flex-preferred-size: $glp_col-8; flex-basis: $glp_col-8;width: $glp_col-8;}
-    > [class*="#{$col}-9"]{ -webkit-flex-basis: $glp_col-9; -ms-flex-preferred-size: $glp_col-9; flex-basis: $glp_col-9;width: $glp_col-9;}
-    > [class*="#{$col}-10"]{ -webkit-flex-basis: $glp_col-10; -ms-flex-preferred-size: $glp_col-10; flex-basis: $glp_col-10;width: $glp_col-10;}
-    > [class*="#{$col}-11"]{ -webkit-flex-basis: $glp_col-11; -ms-flex-preferred-size: $glp_col-11; flex-basis: $glp_col-11;width: $glp_col-11;}
-    > [class*="#{$col}-12"]{ -webkit-flex-basis: $glp_col-12; -ms-flex-preferred-size: $glp_col-12; flex-basis: $glp_col-12;width: $glp_col-12;}
-  }
 }
 
 // Function to generate the offset
-// @mixin makeOff($off)
-// {
-//   [class*="grid"]{
-//     > [data-push-left*="#{$off}-0"]{ margin-left: 0; }
-//     > [data-push-left*="#{$off}-1"]{ margin-left: $glp_col-1; }
-//     > [data-push-left*="#{$off}-2"]{ margin-left: $glp_col-2; }
-//     > [data-push-left*="#{$off}-3"]{ margin-left: $glp_col-3; }
-//     > [data-push-left*="#{$off}-4"]{ margin-left: $glp_col-4; }
-//     > [data-push-left*="#{$off}-5"]{ margin-left: $glp_col-5; }
-//     > [data-push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
-//     > [data-push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
-//     > [data-push-left*="#{$off}-7"]{ margin-left: $glp_col-7; }
-//     > [data-push-left*="#{$off}-8"]{ margin-left: $glp_col-8; }
-//     > [data-push-left*="#{$off}-9"]{ margin-left: $glp_col-9; }
-//     > [data-push-left*="#{$off}-10"]{ margin-left: $glp_col-10; }
-//     > [data-push-left*="#{$off}-11"]{ margin-left: $glp_col-11; }
+@mixin makeOff($off)
+{
+  [class*="grid"]{
+    > [data-push-left*="#{$off}-0"]{ margin-left: 0; }
+    > [data-push-left*="#{$off}-1"]{ margin-left: $glp_col-1; }
+    > [data-push-left*="#{$off}-2"]{ margin-left: $glp_col-2; }
+    > [data-push-left*="#{$off}-3"]{ margin-left: $glp_col-3; }
+    > [data-push-left*="#{$off}-4"]{ margin-left: $glp_col-4; }
+    > [data-push-left*="#{$off}-5"]{ margin-left: $glp_col-5; }
+    > [data-push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
+    > [data-push-left*="#{$off}-6"]{ margin-left: $glp_col-6; }
+    > [data-push-left*="#{$off}-7"]{ margin-left: $glp_col-7; }
+    > [data-push-left*="#{$off}-8"]{ margin-left: $glp_col-8; }
+    > [data-push-left*="#{$off}-9"]{ margin-left: $glp_col-9; }
+    > [data-push-left*="#{$off}-10"]{ margin-left: $glp_col-10; }
+    > [data-push-left*="#{$off}-11"]{ margin-left: $glp_col-11; }
 
-//     > [data-push-right*="#{$off}-0"]{ margin-right: 0; }
-//     > [data-push-right*="#{$off}-1"]{ margin-right: $glp_col-1; }
-//     > [data-push-right*="#{$off}-2"]{ margin-right: $glp_col-2; }
-//     > [data-push-right*="#{$off}-3"]{ margin-right: $glp_col-3; }
-//     > [data-push-right*="#{$off}-4"]{ margin-right: $glp_col-4; }
-//     > [data-push-right*="#{$off}-5"]{ margin-right: $glp_col-5; }
-//     > [data-push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
-//     > [data-push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
-//     > [data-push-right*="#{$off}-7"]{ margin-right: $glp_col-7; }
-//     > [data-push-right*="#{$off}-8"]{ margin-right: $glp_col-8; }
-//     > [data-push-right*="#{$off}-9"]{ margin-right: $glp_col-9; }
-//     > [data-push-right*="#{$off}-10"]{ margin-right: $glp_col-10; }
-//     > [data-push-right*="#{$off}-11"]{ margin-right: $glp_col-11; }
-//   }
-// }
+    > [data-push-right*="#{$off}-0"]{ margin-right: 0; }
+    > [data-push-right*="#{$off}-1"]{ margin-right: $glp_col-1; }
+    > [data-push-right*="#{$off}-2"]{ margin-right: $glp_col-2; }
+    > [data-push-right*="#{$off}-3"]{ margin-right: $glp_col-3; }
+    > [data-push-right*="#{$off}-4"]{ margin-right: $glp_col-4; }
+    > [data-push-right*="#{$off}-5"]{ margin-right: $glp_col-5; }
+    > [data-push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
+    > [data-push-right*="#{$off}-6"]{ margin-right: $glp_col-6; }
+    > [data-push-right*="#{$off}-7"]{ margin-right: $glp_col-7; }
+    > [data-push-right*="#{$off}-8"]{ margin-right: $glp_col-8; }
+    > [data-push-right*="#{$off}-9"]{ margin-right: $glp_col-9; }
+    > [data-push-right*="#{$off}-10"]{ margin-right: $glp_col-10; }
+    > [data-push-right*="#{$off}-11"]{ margin-right: $glp_col-11; }
+  }
+}
 
 @mixin hideShow($prefix)
 {
-  [class*="#{$prefix}-hide"]{ display: none;}
-  [class*="#{$prefix}-hide-important"]{ display: none!important;}
-  [class*="#{$prefix}-show"]{ display: block;}
-  [class*="#{$prefix}-show-important"]{ display: block!important;}
+	[class*="#{$prefix}-hide"]{ display: none!important;}
+  [class*="#{$prefix}-show"]{ display: flex!important;}
+	[class*="#{$prefix}-show-ib"]{ display: inline-block!important;}
 }
 
 /*==============================================================================
 	#GRIDLEX
 ==============================================================================*/
-.container,
-.container-full {
-	max-width: $container;
-	margin: 0 auto;
-}
 [class*="grid"]{
   box-sizing: border-box;
   display: -webkit-flex;
@@ -169,22 +136,7 @@ $glp_col-11-12: calc(100% / 11);
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   margin-left: -$gl-gutter;
-
-  @media only screen and (max-width: $small) {
-    margin-left: -$gl-sm-gutter;
-  }
 }
-
-html.lte-ie9 [class*="grid"] {
-  display: block;
-
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-}
-
 .col,
 [class*="col-"]{
   box-sizing: border-box;
@@ -192,17 +144,7 @@ html.lte-ie9 [class*="grid"] {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   padding: 0 0 0 $gl-gutter;
-
-  @media only screen and (max-width: $small) {
-    padding: 0 0 0 $gl-sm-gutter;
-
-  }
 }
-
-html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
-  float: left;
-}
-
 .col{
   -webkit-flex: 1 1 0%;
   -ms-flex: 1 1 0%;
@@ -319,6 +261,11 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
     -ms-flex-item-align: end;
     align-self: flex-end;
   }
+  &[class*="-hug"]{
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+  }
 }
 
 .col {
@@ -330,52 +277,60 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
 /*==============================================================================
 	#GRID BY NUMBER
 ==============================================================================*/
-// @include makeGridByNumber(grid);
+@include makeGridByNumber(grid);
 
-// @media #{$gl-lg}{
-//   @include makeGridByNumber(_lg);
-// }
-// @media #{$gl-md}{
-//   @include makeGridByNumber(_md);
-// }
-// @media #{$gl-sm}{
-//   @include makeGridByNumber(_sm);
-// }
-// @media #{$gl-xs}{
-//   @include makeGridByNumber(_xs);
-// }
+@media #{$gl-lg}{
+  @include makeGridByNumber(_lg);
+}
+@media #{$gl-md}{
+  @include makeGridByNumber(_md);
+}
+@media #{$gl-sm}{
+  @include makeGridByNumber(_sm);
+}
+@media #{$gl-xs}{
+  @include makeGridByNumber(_xs);
+}
+@media #{$gl-ty}{
+  @include makeGridByNumber(_ty);
+}
 
 
 /*==============================================================================
 	#COLUMN SIZES
 ==============================================================================*/
 @include makeCol(col);
-// @include makeOff(off);
+@include makeOff(off);
 
 @media #{$gl-lg}{
   @include makeCol(_lg);
-  // @include makeOff(_lg);
+  @include makeOff(_lg);
 }
 @media #{$gl-md}{
   @include makeCol(_md);
-  // @include makeOff(_md);
+  @include makeOff(_md);
 }
 @media #{$gl-sm}{
   @include makeCol(_sm);
-  // @include makeOff(_sm);
+  @include makeOff(_sm);
 }
 @media #{$gl-xs}{
   @include makeCol(_xs);
-  // @include makeOff(_xs);
+  @include makeOff(_xs);
+}
+@media #{$gl-ty}{
+  @include makeCol(_ty);
+  @include makeOff(_ty);
 }
 
 /*==============================================================================
 	#HIDE SHOW
 ==============================================================================*/
-[class*="lg-show"]{ display: none;}
-[class*="md-show"]{ display: none;}
-[class*="sm-show"]{ display: none;}
-[class*="xs-show"]{ display: none;}
+[class*="lg-show"]{ display: none!important;}
+[class*="md-show"]{ display: none!important;}
+[class*="sm-show"]{ display: none!important;}
+[class*="sm-show-ib"]{ display: none!important;}
+[class*="xs-show"]{ display: none!important;}
 .text-right {
   text-align: right;
 }
@@ -390,41 +345,48 @@ html.lte-ie9 .col, html.lte-ie9 [class*="col-"] {
 	[class*="md-show"]{ display: none;}
 	[class*="sm-show"]{ display: none;}
   [class*="xs-show"]{ display: none;}
-  .lg-padding {padding-bottom: $gl-gutter;}
+  .padding-lg {padding-bottom: 24px;}
 }
 @media #{$gl-md}{
   @include hideShow(md);
 	[class*="sm-show"]{ display: none;}
 	[class*="xs-show"]{ display: none;}
 	.md-text-left { text-align: left;}
-	.md-text-center { text-align: center;}
-  .md-text-right { text-align: right;}
-  .md-padding {padding-bottom: $gl-gutter;}
+	.md-text-center  { text-align: center;}
+  .md-text-right  { text-align: right;}
+  .padding-md {padding-bottom: 24px;}
 }
 @media #{$gl-sm}{
   @include hideShow(sm);
 	[class*="xs-show"]{ display: none;}
 	.sm-text-left { text-align: left;}
-	.sm-text-center { text-align: center;}
-  .sm-text-right { text-align: right;}
-  .sm-padding {padding-bottom: $gl-sm-gutter;}
+	.sm-text-center  { text-align: center;}
+  .sm-text-right  { text-align: right;}
+  .padding-sm {padding-bottom: 24px;}
 }
 @media #{$gl-xs}{
   @include hideShow(xs);
 	.xs-text-left { text-align: left;}
-	.xs-text-center { text-align: center;}
-  .xs-text-right { text-align: right;}
-  .xs-padding {padding-bottom: $gl-sm-gutter;}
+	.xs-text-center  { text-align: center;}
+  .xs-text-right  { text-align: right;}
+  .padding-xs {padding-bottom: 24px;}
 }
 
 /*==============================================================================
 	#HELPERS
 ==============================================================================*/
 .container {
-  @media only screen and (max-width: $large) {
-    padding: 0 $gl-gutter;
-  }
-  @media only screen and (max-width: $small) {
-    padding: 0 $gl-sm-gutter;
-  }
+	max-width: $container;
+	margin: 0 auto;
+  padding: 0 $gl-gutter;
+}
+@media only screen and (max-width: $large) {
+	.container {
+		padding: 0 $gl-gutter;
+	}
+}
+@media only screen and (max-width: $extrasmall) {
+	.container {
+		padding: 0 16px;
+	}
 }

@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+{% include hero.html type="home" %}
+
+<div class="home-sections">
+
+  <div class="home-section">
+    <div class="container">
+
+      <div class="home-clients text-center">
+        <h2 class="h4">{{ page.featured_clients.title }}</h2>
+        <div class="home-clients__logos">
+          <div class="grid-5">
+            {%- for client in page.featured_clients.clients -%}
+              <div class="col">
+                <div class="home-clients__logo">
+                  <img class="home-clients__logo-image" src="{{ client.image }}" alt="{{ client.title }} Logo"/>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  {%- for value in page.value_propositions -%}
+    {%- assign isEven = false -%}
+    {%- assign indexModulo = forloop.index | modulo: 2 -%}
+    {%- if indexModulo == 0 -%}
+      {%- assign isEven = true -%}
+    {%- endif -%}
+    <div class="home-section">
+      <div class="container">
+
+        <div class="home-value-props">
+          <div class="grid-2-middle">
+            <div class="col">
+              <div class="home-value-props__illustration">
+                <img class="home-value-props__image" src="{{ value.image.url }}" alt="{{ value.heading }}" width="{{ value.image.width }}" height="{{ value.image.height }}" />
+              </div>
+            </div>
+            <div class="col{% if isEven %}-first{% endif %}">
+              <div class="home-value-props__content">
+                <h3 class="h2">{{ value.heading }}</h3>
+                {{ value.text | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+
+  <div class="home-section">
+    <div class="container">
+
+      <div class="home-cta-wrapper">
+        <div class="home-cta">
+          <div class="grid-middle-spaceBetween">
+            <div class="col">
+              <div class="home-cta__content">
+                <h4 class="home-cta__content-heading">{{ page.call_to_action.heading }}</h4>
+                <h4 class="home-cta__content-subheading">{{ page.call_to_action.subheading }}</h3>
+              </div>
+            </div>
+            <div class="col-right">
+              <div class="home-cta__button">
+                <a class="button button--secondary" href="{{ page.call_to_action.button.link }}" title="{{ page.call_to_action.button.title }}{{ site.title | prepend: ' | ' }}">
+                  {%- if page.call_to_action.button.icon != blank -%}<i class="fas fa-{{ page.call_to_action.button.icon }}"></i>{%- endif -%}{{ page.call_to_action.button.title }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
