@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="content-section">
+  <div class="container">
+    <div class="grid grid-gap64">
+
+      <div class="col-hug_md-12 col-gap64">
+        <div class="content-section__sidebar">
+          <h1 class="content-section__sidebar-heading">{{ page.title }}</h1>
+          <p class="content-section__sidebar-subtitle">{{ page.subtitle }}</p>
+          <div class="buttons content-section__sidebar-buttons">
+            <a class="button" href="{{ page.button.link }}" title="{{ page.button.title }}{{ site.title | prepend: ' | ' }}">
+              {{ page.button.title }}{%- if page.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.button.icon }}"></i>{%- endif -%}
+            </a>
+          </div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <div class="col col_md-12 col-gap64 rte">
+        {{ content }}
+        {%- if page.content_cta.link and page.content_cta.link != blank -%}
+          <a class="button button--subtle button--subtle-large" href="{{ page.content_cta.link }}" title="{{ page.content_cta.title }}{{ site.title | prepend: ' | ' }}">
+            {{ page.content_cta.title }}{%- if page.content_cta.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.content_cta.icon }}"></i>{%- endif -%}
+          </a>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include cta.html %}

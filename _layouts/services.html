@@ -1,0 +1,7 @@
+---
+layout: page
+---
+{%- for service in site.data.global.services -%}
+  <h2>{{ service.heading }}</h2>
+  <p>{{ service.text }}</p>
+{%- endfor -%}

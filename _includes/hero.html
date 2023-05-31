@@ -6,15 +6,15 @@
         <div class="col">
           <div class="hero__content">
             <div class="hero__content-words">
-              <h1 class="hero-content-heading">{{ page.hero.heading | newline_to_br }}</h1>
-              {{ page.hero.subtext | markdownify }}
+              <h1 class="hero__content-heading">{{ page.hero.heading | newline_to_br }}</h1>
+              <div class="hero__content-text">{{ page.hero.subtext | markdownify }}</div>
             </div>
             <div class="buttons">
-              <a class="button" href="{{ page.hero.button.link }}" title="{{ page.hero.button.title }}{{ site.title | prepend: ' | ' }}">
-                {%- if page.hero.button.icon != blank -%}<i class="fas fa-{{ page.hero.button.icon }}"></i>{%- endif -%}{{ page.hero.button.title }}
+              <a class="button button--secondary" href="{{ page.hero.button.link }}" title="{{ page.hero.button.title }}{{ site.title | prepend: ' | ' }}">
+                {%- if page.hero.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.button.icon }}"></i>{%- endif -%}{{ page.hero.button.title }}
               </a>
-              <a class="button button--subtle" href="{{ page.hero.link.link }}" title="{{ page.hero.link.title }}{{ site.title | prepend: ' | ' }}">
-                {%- if page.hero.link.icon != blank -%}<i class="fas fa-{{ page.hero.link.icon }}"></i>{%- endif -%}{{ page.hero.link.title }}
+              <a class="button button--subtle button--subtle-white" href="{{ page.hero.link.link }}" title="{{ page.hero.link.title }}{{ site.title | prepend: ' | ' }}">
+                {%- if page.hero.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.link.icon }}"></i>{%- endif -%}{{ page.hero.link.title }}
               </a>
             </div>
           </div>
@@ -28,5 +28,8 @@
 
       </div>
     </div>
+  </div>
+  <div class="hero-background-slideshow">
+    <div class="hero-background-slideshow-images animated-slideshow-v"></div>
   </div>
 </div>

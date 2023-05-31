@@ -380,6 +380,18 @@ $glp_col-11-12: calc(100% / 11);
 	margin: 0 auto;
   padding: 0 $gl-gutter;
 }
+.grid-gap40 {
+  margin-left: -40px;
+}
+.col-gap40 {
+  padding: 0 0 0 40px;
+}
+.grid-gap64 {
+  margin-left: -64px;
+}
+.col-gap64 {
+  padding: 0 0 0 64px;
+}
 @media only screen and (max-width: $large) {
 	.container {
 		padding: 0 $gl-gutter;

@@ -6,71 +6,96 @@ layout: default
 
 <div class="home-sections">
 
-  <div class="home-section">
+  <div class="home-section content-section">
+    <div class="container">
+      <div class="grid grid-gap64">
+
+        <div class="col-hug_md-12 col-gap64">
+          <div class="content-section__sidebar">
+            <h2 class="h1 content-section__sidebar-heading">{{ page.services.heading }}</h2>
+            <p class="content-section__sidebar-subtitle">{{ page.services.subtitle }}</p>
+            <div class="buttons content-section__sidebar-buttons">
+              <a class="button" href="{{ page.services.button.link }}" title="{{ page.services.button.title }}{{ site.title | prepend: ' | ' }}">
+                {{ page.services.button.title }}{%- if page.services.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.services.button.icon }}"></i>{%- endif -%}
+              </a>
+              <a class="button button--subtle" href="{{ page.services.link.link }}" title="{{ page.services.link.title }}{{ site.title | prepend: ' | ' }}">
+                {%- if page.services.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.services.link.icon }}"></i>{%- endif -%}{{ page.services.link.title }}
+              </a>
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="col col_md-12 col-gap64">
+          <div class="grid grid-gap40">
+            {%- for service in site.data.global.services -%}
+              <div class="col-6_xs-12 col-gap40 content-section__block">
+                <h3 class="h2">{{ service.heading }}</h3>
+                <p>{{ service.excerpt }}</p>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="home-section home-client-wrapper">
     <div class="container">
 
       <div class="home-clients text-center">
-        <h2 class="h4">{{ page.featured_clients.title }}</h2>
         <div class="home-clients__slideshow">
-          <div class="home-clients__slideshow-images animated-slideshow" style="background-image: url('{{ page.featured_clients.image.url }}'); width: {{ page.featured_clients.image.width | append: 'px' }}; height: {{ page.featured_clients.image.height | append: 'px' }};"></div>
+          <div class="home-clients__slideshow-images animated-slideshow-h" style="background-image: url('{{ page.featured_clients.image.url }}'); width: {{ page.featured_clients.image.width | append: 'px' }}; height: {{ page.featured_clients.image.height | append: 'px' }};"></div>
         </div>
       </div>
 
     </div>
   </div>
 
-  {%- for value in page.value_propositions -%}
-    {%- assign isEven = false -%}
-    {%- assign indexModulo = forloop.index | modulo: 2 -%}
-    {%- if indexModulo == 0 -%}
-      {%- assign isEven = true -%}
-    {%- endif -%}
-    <div class="home-section">
-      <div class="container">
-
-        <div class="home-value-props">
-          <div class="grid-2-middle">
-            <div class="col">
-              <div class="home-value-props__illustration">
-                <img class="home-value-props__image" src="{{ value.image.url }}" alt="{{ value.heading }}" width="{{ value.image.width }}" height="{{ value.image.height }}" />
-              </div>
-            </div>
-            <div class="col{% if isEven %}-first{% endif %}">
-              <div class="home-value-props__content">
-                <h3 class="h2">{{ value.heading }}</h3>
-                {{ value.text | markdownify }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  {%- endfor -%}
-
-  <div class="home-section">
+  <div class="home-section content-section">
     <div class="container">
+      <div class="grid grid-gap64">
 
-      <div class="home-cta-wrapper">
-        <div class="home-cta">
-          <div class="grid-middle-spaceBetween">
-            <div class="col">
-              <div class="home-cta__content">
-                <h4 class="h3 home-cta__content-heading">{{ page.call_to_action.heading }}</h4>
-                <h4 class="h3 home-cta__content-subheading">{{ page.call_to_action.subheading }}</h3>
-              </div>
+        <div class="col-hug_md-12 col-gap64">
+          <div class="content-section__sidebar">
+            <h2 class="h1 content-section__sidebar-heading">{{ page.about.heading }}</h2>
+            <p class="content-section__sidebar-subtitle">{{ page.about.subtitle }}</p>
+            <div class="buttons content-section__sidebar-buttons">
+              <a class="button" href="{{ page.about.button.link }}" title="{{ page.about.button.title }}{{ site.title | prepend: ' | ' }}">
+                {{ page.services.button.title }}{%- if page.services.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.button.icon }}"></i>{%- endif -%}
+              </a>
+              <a class="button button--subtle" href="{{ page.about.link.link }}" title="{{ page.about.link.title }}{{ site.title | prepend: ' | ' }}">
+                {%- if page.about.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.link.icon }}"></i>{%- endif -%}{{ page.about.link.title }}
+              </a>
             </div>
-            <div class="col-right">
-              <div class="home-cta__button">
-                <a class="button button--secondary" href="{{ page.call_to_action.button.link }}" title="{{ page.call_to_action.button.title }}{{ site.title | prepend: ' | ' }}">
-                  {%- if page.call_to_action.button.icon != blank -%}<i class="fas fa-{{ page.call_to_action.button.icon }}"></i>{%- endif -%}{{ page.call_to_action.button.title }}
-                </a>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="col col_md-12 col-gap64">
+          <div class="content-section__text">
+            {{ page.about.content | markdownify }}
+            <a class="button button--subtle button--subtle-large" href="{{ page.about.content_link.link }}" title="{{ page.about.content_link.title }}{{ site.title | prepend: ' | ' }}">
+              {{ page.about.content_link.title }}{%- if page.about.content_link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.content_link.icon }}"></i>{%- endif -%}
+            </a>
+          </div>
+          <div class="content-section__profile">
+            <div class="content-section__profile-avatar">
+              <img class="content-section__profile-avatar-image" src="{{ site.data.global.profile.image.url }}" width="{{ site.data.global.profile.image.width }}" height="{{ site.data.global.profile.image.height }}" alt="{{ site.data.global.profile.name }}" />
+            </div>
+            <div class="content-section__profile-words">
+              <div class="content-section__profile-words-top">
+                <h5 class="h3 content-section__profile-words-heading">{{ site.data.global.profile.name }}</h5>
+                <p class="content-section__profile-words-subtitle">{{ site.data.global.profile.title }}</p>
               </div>
+              {{ site.data.global.profile.description | markdownify }}
             </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 
 </div>
+
+{% include cta.html %}

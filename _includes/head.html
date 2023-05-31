@@ -21,7 +21,7 @@
   <title>{{ pageTitle }}</title>
   <meta name="description" content="{{ pageDescription }}">
 
-  <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}" />
+  <link rel="icon" type="image/png" href="{{ '/favicon.png?v=1.1' | relative_url }}" />
   <link rel="canonical" href="{{ pageUrl }}">
 
   <meta property="og:url" content="{{ pageUrl }}" />
@@ -30,7 +30,7 @@
   <meta property="og:description" content="{{ pageDescription }}" />
   <meta property="og:image" content="{{ '/assets/images/facebook-share.png' | relative_url }}" />
 
-  <link rel="stylesheet" href="{{ '/assets/styles/main.css?v=1.0' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/styles/main.css' | relative_url }}">
 
   {%- if isProd -%}
     {% include google-analytics.html %}

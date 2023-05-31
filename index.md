@@ -11,49 +11,53 @@ hero:
 
     One Pixel at a Time.
   subtext: >-
-    OAK ISLAND DESIGNS is your go-to designer for beautiful websites, brands and logos tailored for small to medium businesses. We believe that every brand deserves an extraordinary online presence that leaves a lasting impression.
+    Crafting digital experiences in Ile-des-Chênes and beyond.
   button:
     icon: message-dollar
     title: Get a Free Quote
     link: /free-quote/
   link:
     icon: paper-plane
-    title: Contact Us
-    link: /contact-us/
+    title: Let's Talk
+    link: /contact/
   image: /assets/images/logo-circle.svg
-featured_clients:
-  title: Serving Businesses Like
-  image:
-      url: /assets/images/client-logos.png
-      width: 3686
-      height: 126
-value_propositions:
-  - heading: Customized Solutions, Affordable Pricing
-    text: >-
-      At Oak Island Designs, we believe that exceptional design should be accessible to businesses of all sizes. We offer transparent and competitive pricing, ensuring that you receive high-quality designs without breaking the bank.
-    image:
-      url: /assets/images/home-illustration_01.png
-      width: 356.22
-      height: 244
-  - heading: Crafted with Precision and Purpose
-    text: >-
-      We pay attention to every detail, ensuring that your website not only looks visually appealing but also works seamlessly on all devices. With user experience at the forefront, we create designs that engage and convert your visitors into loyal customers.
-    image:
-      url: /assets/images/home-illustration_02.png
-      width: 282.22
-      height: 342
-  - heading: Your Success, Our Priority
-    text: >-
-      Your success is our ultimate priority. We go above and beyond to understand your business goals, target audience, and industry landscape. By blending our expertise with your vision, we craft designs that elevate your brand, establish credibility, and help you stand out from the competition.
-    image:
-      url: /assets/images/home-illustration_03.png
-      width: 340.43
-      height: 300
-call_to_action:
-  heading: Looking for exceptional design?
-  subheading: Let us bring your vision to life.
+services:
+  heading: Services
+  subtitle: Expert solutions for your digital success.
   button:
-    icon: message-dollar
-    title: Get a Free Quote
-    link: /free-quote/
+    icon: arrow-right
+    title: Learn More
+    link: /services/
+  link:
+    icon: paper-plane
+    title: Let's Talk
+    link: /contact/
+featured_clients:
+  image:
+    url: /assets/images/client-logos.png
+    width: 3686
+    height: 126
+about:
+  heading: About
+  subtitle: Crafting your digital journey together.
+  button:
+    icon: arrow-right
+    title: Learn More
+    link: /about/
+  link:
+    icon: paper-plane
+    title: Let's Talk
+    link: /contact/
+  content: >-
+    Welcome to OAK ISLAND DESIGNS—your local hub for all things digital design. I've called Ile-des-Chênes, Manitoba home for a long time and have spent the last 10 years helping businesses across the region establish and strengthen their online presence. I’ve partnered with diverse businesses, big and small, in Grande Pointe, Niverville, Landmark, Steinbach, and Winnipeg, and turned their digital dreams into reality.
+
+    
+    I believe that the power of design goes beyond mere aesthetics. It's about communicating your unique story to your audience, building connections, and driving action. Whether it's through a visually stunning and user-friendly website, a memorable logo, or a powerful Shopify store, I'm committed to making your brand shine in the digital landscape.
+
+
+    What sets OAK ISLAND DESIGNS apart? It's my unwavering commitment to transparency, affordability, and clear communication. You won't find any hidden costs here, only honest work. Regardless of your budget, I strive to deliver value that exceeds your investment. And from our first conversation to the final product, I'll keep you in the loop, ensuring that you're part of the journey every step of the way.
+  content_link:
+    icon: arrow-right
+    title: Ready to elevate your business?
+    link: /contact/
 ---

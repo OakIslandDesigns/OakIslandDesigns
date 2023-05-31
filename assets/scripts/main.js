@@ -32,3 +32,18 @@ window.addEventListener('scroll', function() {
     header.classList.remove('header--scrolled');
   }
 });
+
+/* Mobile button
+======================================= */
+// var button = document.querySelector('.mobile-button');
+
+// button.addEventListener('click tap', function() {
+//   this.classList.toggle('open');
+// });
+
+var button = document.querySelector('.mobile-button');
+
+button.addEventListener('click', function() {
+    var element = document.querySelector('body');
+    element.classList.toggle('mm-active');
+});

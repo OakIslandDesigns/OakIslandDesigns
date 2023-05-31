@@ -1,49 +1,30 @@
+{%- assign header = site.data.global.header -%}
 {%- assign footer = site.data.global.footer -%}
-<footer class="footer">
+<footer class="footer text-center">
   <div class="footer__section">
-    <div class="container">
-      <div class="grid-spaceBetween footer__grid">
-
-        <div class="col">
-          <div class="footer__description">
-            {{ footer.description | markdownify }}
-          </div>
-        </div>
-
-        <div class="col-hug">
-          <div class="footer__column">
-            <h6 class="h5 footer__column-heading">{{ footer.hours.title }}</h6>
-            <ul class="footer__column-list">
-              {%- for item in footer.hours.items -%}
-                <li class="footer__column-list-item">
-                  <p class="footer__column-list-item-text">{{ item.label }}</p>
-                  <p class="footer__column-list-item-text">{{ item.text }}</p>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-hug">
-          <div class="footer__column">
-            <h6 class="h5 footer__column-heading">{{ footer.contact.title }}</h6>
-            <ul class="footer__column-list">
-              {%- for item in footer.contact.items -%}
-                <li class="footer__column-list-item">
-                  <a class="button button--subtle footer__column-list-item-link" href="{{ item.link }}"><i class="fas fa-{{ item.icon }}"></i>{{ item.text }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    <a class="block footer__logo" href="/" title="Homepage{{ site.title | prepend: ' | ' }}">
+      <img class="block footer__logo-image" class="block" src="{{ footer.image.url }}" width="64" height="64" alt="Oak Island Designs Icon"/>
+    </a>
   </div>
   <div class="footer__section">
-    <div class="container">
-      <p class="sm">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
-    </div>
+    <ul class="footer__nav">
+      {%- for link in header.navigation -%}
+        <li class="footer__nav-item">
+          <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{{ link.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
   </div>
-
+  <div class="footer__section">
+    <ul class="footer__nav">
+      {%- for link in footer.contact -%}
+        <li class="footer__nav-item">
+          <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{%- if link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.text }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="footer__section">
+    <p class="sm footer__copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
+  </div>
 </footer>
