@@ -11,16 +11,8 @@ layout: default
 
       <div class="home-clients text-center">
         <h2 class="h4">{{ page.featured_clients.title }}</h2>
-        <div class="home-clients__logos">
-          <div class="grid-5">
-            {%- for client in page.featured_clients.clients -%}
-              <div class="col">
-                <div class="home-clients__logo">
-                  <img class="home-clients__logo-image" src="{{ client.image }}" alt="{{ client.title }} Logo"/>
-                </div>
-              </div>
-            {%- endfor -%}
-          </div>
+        <div class="home-clients__slideshow">
+          <div class="home-clients__slideshow-images animated-slideshow" style="background-image: url('{{ page.featured_clients.image.url }}'); width: {{ page.featured_clients.image.width | append: 'px' }}; height: {{ page.featured_clients.image.height | append: 'px' }};"></div>
         </div>
       </div>
 
@@ -63,8 +55,8 @@ layout: default
           <div class="grid-middle-spaceBetween">
             <div class="col">
               <div class="home-cta__content">
-                <h4 class="home-cta__content-heading">{{ page.call_to_action.heading }}</h4>
-                <h4 class="home-cta__content-subheading">{{ page.call_to_action.subheading }}</h3>
+                <h4 class="h3 home-cta__content-heading">{{ page.call_to_action.heading }}</h4>
+                <h4 class="h3 home-cta__content-subheading">{{ page.call_to_action.subheading }}</h3>
               </div>
             </div>
             <div class="col-right">

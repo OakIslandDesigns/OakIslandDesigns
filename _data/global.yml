@@ -3,14 +3,18 @@ header:
   navigation:
     - title: Portfolio
       link: /portfolio/
+    - title: Services
+      link: /services/
     - title: About Us
       link: /about-us/
-    - title: Contact Us
-      link: /contact-us/
+    - title: Free Quote
+      link: /free-quote/
   button:
-    icon: message-dollar
-    title: Get a Free Quote
-    link: /free-quote/
+    icon: paper-plane
+    title: Contact Us
+    link: /contact-us/
+  mobile_button:
+    icon: align-right
 footer:
   description: >-
     Welcome to Oak Island Designs, your go-to designer for beautiful websites and logos tailored for small to medium businesses. We believe that every brand deserves an extraordinary online presence that leaves a lasting impression.

@@ -6,9 +6,12 @@ seo:
   description: >-
     Looking for professional web and logo design services? Oak Island Designs is your trusted partner. We create captivating designs that resonate with your target audience and drive business growth.
 hero:
-  heading: Elevate Your Business,One Pixel at a Time.
+  heading: >-
+    Elevate Your Business,
+
+    One Pixel at a Time.
   subtext: >-
-    Welcome to **Oak Island Designs**, your go-to designer for beautiful websites & logos tailored for small to medium businesses. We believe that every brand deserves an extraordinary online presence that leaves a lasting impression.
+    OAK ISLAND DESIGNS is your go-to designer for beautiful websites, brands and logos tailored for small to medium businesses. We believe that every brand deserves an extraordinary online presence that leaves a lasting impression.
   button:
     icon: message-dollar
     title: Get a Free Quote
@@ -20,17 +23,10 @@ hero:
   image: /assets/images/logo-circle.svg
 featured_clients:
   title: Serving Businesses Like
-  clients:
-    - title: Baltic Athletics Inc.
-      image: /assets/images/client-logo_baltic-athletics.png
-    - title: The Bargain Bureau
-      image: /assets/images/client-logo_the-bargain-bureau.png
-    - title: The Citizen
-      image: /assets/images/client-logo_the-citizen.png
-    - title: IJL
-      image: /assets/images/client-logo_ijl.png
-    - title: Ignite Massage Therapy
-      image: /assets/images/client-logo_ignite-massage-therapy.png
+  image:
+      url: /assets/images/client-logos.png
+      width: 3686
+      height: 126
 value_propositions:
   - heading: Customized Solutions, Affordable Pricing
     text: >-

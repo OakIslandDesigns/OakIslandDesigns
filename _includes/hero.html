@@ -6,7 +6,7 @@
         <div class="col">
           <div class="hero__content">
             <div class="hero__content-words">
-              <h1 class="hero-content-heading">{{ page.hero.heading }}</h1>
+              <h1 class="hero-content-heading">{{ page.hero.heading | newline_to_br }}</h1>
               {{ page.hero.subtext | markdownify }}
             </div>
             <div class="buttons">
@@ -20,9 +20,9 @@
           </div>
         </div>
 
-        <div class="col">
+        <div class="col sm-hide">
           <div class="hero__logo">
-            <img class="hero__logo-image block animate-spin??" src="/assets/images/logo-circle.svg" alt="Oak Island Designs Icon" />
+            <img class="hero__logo-image block animate-float" src="/assets/images/logo-circle.svg" alt="Oak Island Designs Icon" />
           </div>
         </div>
 
