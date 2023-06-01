@@ -11,9 +11,9 @@
 
   {% capture pageUrl %}{{ page.url | replace:'index.html','' | prepend: absoluteUrl }}{% endcapture %}
 
-  {% capture pageTitle %}{% if page.title != "Home" %}{{ page.seo.title | default: page.title | escape }} | {{ site.title }}{% else %}{{ site.data.seo.title }}{% endif %}{% endcapture %}
+  {% capture pageTitle %}{{ page.seo.title }}{% endcapture %}
+  {% capture pageDescription %}{{ page.seo.description }}{% endcapture %}
 
-  {% capture pageDescription %}{{ page.seo.description | default: site.data.seo.description }}{% endcapture %}
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">

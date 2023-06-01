@@ -2,9 +2,9 @@
 layout: home
 title: Home
 seo:
-  title: "Oak Island Designs: Professional Web and Logo Design Solutions for Businesses"
+  title: "Oak Island Designs | Your Local Website Design Expert"
   description: >-
-    Looking for professional web and logo design services? Oak Island Designs is your trusted partner. We create captivating designs that resonate with your target audience and drive business growth.
+    Based in Ile-des-Chênes, Oak Island Designs offers professional website design, development, and management. Elevate your business online today.
 hero:
   heading: >-
     Elevate Your Business,

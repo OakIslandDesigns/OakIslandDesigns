@@ -2,6 +2,10 @@
 layout: page
 title: About
 subtitle: Crafting your digital journey together.
+seo:
+  title: "About | Oak Island Designs - Your Digital Design Partner"
+  description: >-
+    Discover Oak Island Designs—your reliable partner for digital design in Manitoba. Offering transparency, affordability, and clear communication.
 button:
   icon: paper-plane
   title: Let's Talk

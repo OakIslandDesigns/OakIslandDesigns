@@ -2,6 +2,10 @@
 layout: portfolio
 title: Portfolio
 subtitle: Crafting digital experiences that shine.
+seo:
+  title: "Portfolio | Oak Island Designs - Showcasing Design Success"
+  description: >-
+    Explore a portfolio that celebrates success in digital design. Experience Oak Island Designs’ commitment to quality, creativity, and results.
 button:
   icon: paper-plane
   title: Let's Talk

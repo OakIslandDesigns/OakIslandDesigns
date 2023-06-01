@@ -200,6 +200,11 @@ $glp_col-11-12: calc(100% / 11);
     -ms-flex-align: end;
     align-items: flex-end;
   }
+  &[class*="-nowrap"]{
+    -webkit-flex-flow: row nowrap;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
 
 // Orders
   &[class*="-reverse"]{

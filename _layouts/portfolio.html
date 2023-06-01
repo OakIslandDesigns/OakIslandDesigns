@@ -1,0 +1,30 @@
+---
+layout: page
+---
+<div class="portfolio__items">
+  {%- for item in page.portfolio -%}
+    <div class="portfolio__item">
+      <div class="portfolio__item-screenshot portfolio__item-screenshot--{{ item.type }}">
+        <img class="portfolio__item-screenshot-image" src="{{ item.image.url }}" alt="{{ item.title | append: site.alt_title }}" />
+      </div>
+      <div class="flex-column portfolio__item-content">
+        <h3>{{ item.title }}</h3>
+        <p class="portfolio__item-content-services">{{ item.services }}</p>
+        {%- if item.button or item.link -%}
+        <div class="buttons">
+          {%- if item.button and item.button != blank -%}
+            <a class="button button--wire" href="{{ item.button.link }}" title="{{ item.button.title }}{{ site.title | prepend: ' | ' }}">
+              {{ item.button.title }}{%- if item.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ item.button.icon }}"></i>{%- endif -%}
+            </a>
+          {%- endif -%}
+          {%- if item.link and item.link != blank -%}
+            <a class="button button--subtle" href="{{ item.link.link }}" title="{{ item.link.title | append: ' | ' | append: site.title }}">
+              {%- if item.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ item.link.icon }}"></i>{%- endif -%}{{ item.link.title }}
+            </a>
+          {%- endif -%}
+        </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endfor -%}
+</div>

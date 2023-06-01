@@ -4,13 +4,13 @@
     <div class="cta-wrapper">
       <div class="cta">
         <div class="grid-middle-spaceBetween">
-          <div class="col">
+          <div class="col col-sm-12">
             <div class="cta__content">
               <h4 class="h3 cta__content-heading">{{ site.data.global.call_to_action.heading }}</h4>
               <h4 class="h3 cta__content-subheading">{{ site.data.global.call_to_action.subheading }}</h3>
             </div>
           </div>
-          <div class="col-right">
+          <div class="col-right_sm-12">
             <div class="cta__button">
               <a class="button" href="{{ site.data.global.call_to_action.button.link }}" title="{{ site.data.global.call_to_action.button.title }}{{ site.title | prepend: ' | ' }}">
                 {%- if site.data.global.call_to_action.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ site.data.global.call_to_action.button.icon }}"></i>{%- endif -%}{{ site.data.global.call_to_action.button.title }}
