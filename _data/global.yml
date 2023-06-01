@@ -9,9 +9,9 @@ header:
       link: /about/
     - title: Free Quote
       link: /free-quote/
-    - title: Let's Talk
+    - title: Contact
       link: /contact/
-      icon: paper-plane
+      icon: message-smile
       button: true
 footer:
   image:
@@ -23,8 +23,8 @@ footer:
       text: "204.955.0092"
       link: "tel:+12049550092"
     - icon: envelope
-      text: info@oakislanddesigns.com
-      link: "mailto: info@oakislanddesigns.com"
+      text: justin@oakislanddesigns.com
+      link: "mailto: justin@oakislanddesigns.com"
 services:
   - heading: Website Design
     excerpt: >-
@@ -70,7 +70,7 @@ profile:
     Outside of work, Justin enjoys spending time with his wife and two kids, and indulges in movies and games during his downtime.
 call_to_action:
   heading: Looking for exceptional design?
-  subheading: Let us bring your vision to life.
+  subheading: Let's bring your vision to life.
   button:
     icon: message-dollar
     title: Get a Free Quote

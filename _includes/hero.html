@@ -10,9 +10,8 @@
               <div class="hero__content-text">{{ page.hero.subtext | markdownify }}</div>
             </div>
             <div class="buttons">
-              <a class="button button--secondary" href="{{ page.hero.button.link }}" title="{{ page.hero.button.title }}{{ site.title | prepend: ' | ' }}">
-                {%- if page.hero.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.button.icon }}"></i>{%- endif -%}{{ page.hero.button.title }}
-              </a>
+              {% capture buttonTitle %}{%- if page.hero.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.button.icon }}"></i>{%- endif -%}{{ page.hero.button.title }}{% endcapture %}
+              {%- include typeform-link.html title=page.hero.button.title content=buttonTitle class="button button--secondary" -%}
               <a class="button button--subtle button--subtle-white" href="{{ page.hero.link.link }}" title="{{ page.hero.link.title }}{{ site.title | prepend: ' | ' }}">
                 {%- if page.hero.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.link.icon }}"></i>{%- endif -%}{{ page.hero.link.title }}
               </a>

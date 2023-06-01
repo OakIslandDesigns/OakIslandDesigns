@@ -17,7 +17,7 @@ hero:
     title: Get a Free Quote
     link: /free-quote/
   link:
-    icon: paper-plane
+    icon: message-smile
     title: Let's Talk
     link: /contact/
   image: /assets/images/logo-circle.svg
@@ -29,7 +29,7 @@ services:
     title: Learn More
     link: /services/
   link:
-    icon: paper-plane
+    icon: message-smile
     title: Let's Talk
     link: /contact/
 featured_clients:
@@ -45,7 +45,7 @@ about:
     title: Learn More
     link: /about/
   link:
-    icon: paper-plane
+    icon: message-smile
     title: Let's Talk
     link: /contact/
   content: >-

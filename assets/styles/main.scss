@@ -205,12 +205,15 @@ p, li {
   gap: var(--gap-8);
   min-height: var(--touch-height);
   padding: 0 var(--gap-16);
+  font-family: var(--font-family-main);
   font-size: var(--font-size-button);
   font-weight: var(--font-weight-semibold);
   text-decoration: none;
   color: var(--color-lightest);
   background-color: var(--color-secondary);
+  border: 0;
   transition: var(--transition);
+  cursor: pointer;
 }
   .button i {
     height: 14px;
@@ -292,6 +295,37 @@ strong {
   .rte h5,
   .rte h6 {
     margin-top: var(--gap-16);
+  }
+
+.form__group {
+  margin-bottom: var(--gap-24);
+}
+.form__label {
+  font-size: var(--font-size-button);
+  font-weight: var(--font-weight-semibold);
+}
+.form__input {
+  display: block;
+  width: 100%;
+  height: var(--touch-height);
+  padding: 0 var(--gap-16);
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-button);
+  line-height: var(--touch-height);
+  background: transparent;
+  border: 1px solid var(--color-secondary);
+}
+  .form__input::placeholder {
+    color: #3d2d6861;
+  }
+  .form__input:focus-visible {
+    outline-color: var(--color-accent);
+  }
+  .form__input--textarea {
+    height: 120px;
+    max-width: 100%;
+    max-height: 360px;
+    min-height: 120px;
   }
 
 
@@ -431,6 +465,10 @@ strong {
         width: 100%;
         margin-bottom: var(--gap-40);
       }
+    }
+    .content-section__sidebar-links {
+      margin-top: -8px;
+      margin-bottom: var(--gap-32);
     }
   .content-section__text p, .content-section__text li {
     margin-bottom: var(--gap-24);
@@ -641,6 +679,7 @@ strong {
     }
   .portfolio__item-screenshot {
     flex-shrink: 0;
+    display: block;
     width: 320px;
     aspect-ratio: 1.28/1;
     border-radius: var(--border-radius);
@@ -648,18 +687,18 @@ strong {
     overflow: hidden;
 
     @media screen and (max-width: 768px){
-      width: 75%;
-    }
-    @media screen and (max-width: 480px){
       width: 100%;
     }
   }
     .portfolio__item-screenshot--logo {
       display: flex;
       align-items: center;
-      padding: 18% var(--gap-32);
+      padding: var(--gap-32);
       background-color: var(--color-lightest);
     }
+      .portfolio__item-screenshot--logo .portfolio__item-screenshot-image {
+        max-height: 75%;
+      }
     .portfolio__item-screenshot-image {
       display: block;
       width: 100%;

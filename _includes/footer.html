@@ -9,9 +9,15 @@
   <div class="footer__section">
     <ul class="footer__nav">
       {%- for link in header.navigation -%}
-        <li class="footer__nav-item">
-          <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{{ link.title }}</a>
-        </li>
+        {%- if link.title contains "Free Quote" -%}
+          <li class="footer__nav-item">
+            {%- include typeform-link.html title=link.title class="button button--subtle footer__nav-item-link" -%}
+          </li>
+        {%- else -%}
+          <li class="footer__nav-item">
+            <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{{ link.title }}</a>
+          </li>
+        {%- endif -%}
       {%- endfor -%}
     </ul>
   </div>

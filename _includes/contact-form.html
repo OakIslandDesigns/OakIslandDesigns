@@ -1,5 +1,5 @@
 {%- assign contactSettings = site.data.contact -%}
-<form class="form {% if include.formClass %}{{ include.formClass }}{% endif %}" id="ContactForm" method="post" action="{{ page.url | absolute_url }}?form=success">
+<form class="form" id="ContactForm" method="post" action="{{ page.url | absolute_url }}?form=success">
 
   <div class="grid">
     <div class="col-6_xs-12 xs-padding">
@@ -46,7 +46,7 @@
         <input type="hidden" name="inbox_key" value="oak-island-designs-contact">
         <input type="hidden" name="_subject" value="Oak Island Designs Inquiry">
         <input type="text" name="_gotcha" style="display: none;">
-        <button class="button" type="submit">{{ contactSettings.form.button.text }}</button>
+        <button class="button" type="submit"><i class="fa-sharp fa-solid fa-paper-plane"></i>{{ contactSettings.form.button.text }}</button>
       </div>
     </div>
   </div>

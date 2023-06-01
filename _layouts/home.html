@@ -78,18 +78,7 @@ layout: default
               {{ page.about.content_link.title }}{%- if page.about.content_link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.content_link.icon }}"></i>{%- endif -%}
             </a>
           </div>
-          <div class="content-section__profile">
-            <div class="content-section__profile-avatar">
-              <img class="content-section__profile-avatar-image" src="{{ site.data.global.profile.image.url }}" width="{{ site.data.global.profile.image.width }}" height="{{ site.data.global.profile.image.height }}" alt="{{ site.data.global.profile.name }}" />
-            </div>
-            <div class="content-section__profile-words">
-              <div class="content-section__profile-words-top">
-                <h5 class="h3 content-section__profile-words-heading">{{ site.data.global.profile.name }}</h5>
-                <p class="content-section__profile-words-subtitle">{{ site.data.global.profile.title }}</p>
-              </div>
-              {{ site.data.global.profile.description | markdownify }}
-            </div>
-          </div>
+          {%- include profile.html -%}
         </div>
 
       </div>

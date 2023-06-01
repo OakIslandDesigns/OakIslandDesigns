@@ -7,7 +7,7 @@ seo:
   description: >-
     Oak Island Designs provides diverse digital services including website design and development, Shopify setup, logo creation, and SEO services.
 button:
-  icon: arrow-right
+  icon: message-smile
   title: Let's Talk
   link: /contact/
 ---

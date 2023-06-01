@@ -7,7 +7,7 @@ seo:
   description: >-
     Explore a portfolio that celebrates success in digital design. Experience Oak Island Designs’ commitment to quality, creativity, and results.
 button:
-  icon: paper-plane
+  icon: message-smile
   title: Let's Talk
   link: /contact/
 portfolio:

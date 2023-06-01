@@ -18,9 +18,15 @@
                   </a>
                 </li>
               {%- else -%}
-                <li class="header__nav-item">
-                  <a class="button button--subtle header__nav-item-link" href="{{ link.link }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">{{ link.title }}</a>
-                </li>
+                {%- if link.title contains "Free Quote" -%}
+                  <li class="header__nav-item">
+                    {%- include typeform-link.html title=link.title class="button button--subtle header__nav-item-link" -%}
+                  </li>
+                {%- else -%}
+                  <li class="header__nav-item">
+                    <a class="button button--subtle header__nav-item-link" href="{{ link.link }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">{{ link.title }}</a>
+                  </li>
+                {%- endif -%}
               {%- endif -%}
             {%- endfor -%}
           </ul>
@@ -29,7 +35,6 @@
           <span></span>
           <span></span>
           <span></span>
-          <!-- <span></span> -->
         </div>
       </div>
     </div>

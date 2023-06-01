@@ -1,17 +1,17 @@
 form:
-  success_message_text: Thanks for your message! I'll get back to you within 24 hours.
+  success_message_text: Thank you for your message! I'll get back to you within 24 hours.
   name:
     label: Name
     required: true
-    placeholder: John Smith
+    placeholder: Jane Doe
   company:
     label: Company/Organization
     required: false
-    placeholder: John's Company
+    placeholder: Jane's Company
   email:
     label: Email
     required: true
-    placeholder: john.smith@email.com
+    placeholder: jane.doe@email.com
   phone:
     label: Phone Number
     required: true
