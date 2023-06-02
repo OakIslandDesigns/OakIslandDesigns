@@ -62,7 +62,7 @@ layout: default
             <p class="content-section__sidebar-subtitle">{{ page.about.subtitle }}</p>
             <div class="buttons content-section__sidebar-buttons">
               <a class="button" href="{{ page.about.button.link }}" title="{{ page.about.button.title }}{{ site.title | prepend: ' | ' }}">
-                {{ page.services.button.title }}{%- if page.services.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.button.icon }}"></i>{%- endif -%}
+                {{ page.about.button.title }}{%- if page.about.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.button.icon }}"></i>{%- endif -%}
               </a>
               <a class="button button--subtle" href="{{ page.about.link.link }}" title="{{ page.about.link.title }}{{ site.title | prepend: ' | ' }}">
                 {%- if page.about.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.about.link.icon }}"></i>{%- endif -%}{{ page.about.link.title }}
