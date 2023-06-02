@@ -49,7 +49,7 @@ about:
     title: Let's Talk
     link: /contact/
   content: >-
-    Welcome to OAK ISLAND DESIGNS—your local hub for all things digital design. I've called Ile-des-Chênes, Manitoba home for a long time and have spent the last 10 years helping businesses across the region establish and strengthen their online presence. I’ve partnered with diverse businesses, big and small, in Grande Pointe, Niverville, Landmark, Steinbach, and Winnipeg, and turned their digital dreams into reality.
+    Welcome to OAK ISLAND DESIGNS—your local hub for all things digital design. I've called Ile-des-Chênes, Manitoba home for a long time and have spent the last 10 years helping businesses across the region establish and strengthen their online presence. I’ve partnered with diverse businesses, big and small, in Grande Pointe, Niverville, Lorette, Steinbach, and Winnipeg, and turned their digital dreams into reality.
 
     
     I believe that the power of design goes beyond mere aesthetics. It's about communicating your unique story to your audience, building connections, and driving action. Whether it's through a visually stunning and user-friendly website, a memorable logo, or a powerful Shopify store, I'm committed to making your brand shine in the digital landscape.

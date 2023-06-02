@@ -35,15 +35,21 @@ window.addEventListener('scroll', function() {
 
 /* Mobile button
 ======================================= */
-// var button = document.querySelector('.mobile-button');
-
-// button.addEventListener('click tap', function() {
-//   this.classList.toggle('open');
-// });
-
 var button = document.querySelector('.mobile-button');
 
 button.addEventListener('click', function() {
     var element = document.querySelector('body');
     element.classList.toggle('mm-active');
 });
+
+/* Sets the CSS variable "doc-height" to
+the device height. Accounts for search
+bars and other browser stuff.
+======================================= */
+const documentHeight = () => {
+  const doc = document.documentElement;
+  console.log('doc', doc);
+  doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+}
+window.addEventListener('resize', documentHeight);
+documentHeight();

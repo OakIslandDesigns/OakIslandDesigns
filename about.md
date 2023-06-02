@@ -16,11 +16,11 @@ content_cta:
   link: /contact/
 ---
 ## My Story
-OAK ISLAND DESIGNS is more than just a name—it's a testament to my roots and dedication to helping local businesses thrive in the digital world. I've been living and breathing digital design in Ile-des-Chênes, Manitoba for over seven years, and in this time, I've seen the incredible impact a strong online presence can have on businesses of all sizes. My goal? To make the online world more accessible, productive, and impactful for local businesses.
+OAK ISLAND DESIGNS is more than just a name—it's a testament to my roots and dedication to helping local businesses thrive in the digital world. I've been living and breathing digital design in Ile-des-Chênes, Manitoba for over ten years, and in this time, I've seen the incredible impact a strong online presence can have on businesses of all sizes. My goal? To make the online world more accessible, productive, and impactful for local businesses.
 
 
 ## My Expertise
-In the digital sphere, I've worn many hats. From the intricate artistry of website design to the complex mechanics of development, from ensuring seamless website management to building captivating Shopify stores, and from crafting distinct logos to empowering businesses with robust content and SEO strategies—my seven years in this field have been filled with diverse and enriching experiences. This extensive skill set allows me to offer you a comprehensive digital design solution tailored to your unique needs.
+In the digital sphere, I've worn many hats. From the intricate artistry of website design to the complex mechanics of development, from ensuring seamless website management to building captivating Shopify stores, and from crafting distinct logos to empowering businesses with robust content and SEO strategies—my ten years in this field have been filled with diverse and enriching experiences. This extensive skill set allows me to offer you a comprehensive digital design solution tailored to your unique needs.
 
 ## Our Approach
 Every project I undertake is a collaboration between you and me. I prioritize transparency, ensuring every transaction is open and honest. I offer affordability, delivering high-quality services that respect your budget. And most importantly, I value clear communication—listening to your needs, keeping you updated, and offering advice to make sure we're aligned every step of the way.
