@@ -3,9 +3,10 @@ layout: portfolio
 title: Portfolio
 subtitle: Crafting digital experiences that shine.
 seo:
-  title: "Portfolio | Oak Island Designs - Showcasing Design Success"
+  title: Portfolio | Oak Island Designs - Showcasing Design Success
   description: >-
-    Explore a portfolio that celebrates success in digital design. Experience Oak Island Designs’ commitment to quality, creativity, and results.
+    Explore a portfolio that celebrates success in digital design. Experience
+    Oak Island Designs’ commitment to quality, creativity, and results.
 button:
   icon: message-smile
   title: Let's Talk
@@ -32,7 +33,9 @@ portfolio:
       width: 320
       height: 250
     title: The Bargain Bureau
-    services: Website design & development, Logo design, Website management, SEO services
+    services: >-
+      Website design & development, Logo design, Website management, SEO
+      services
     button:
       icon: arrow-right
       title: Read Case Study
@@ -46,6 +49,11 @@ portfolio:
       url: /assets/images/client_the-reimer-family-climate-crisis-fund_logo.svg
     title: The Reimer Family Climate Crisis Fund
     services: Logo design
+  - type: website
+    image:
+      url: /assets/images/client_jenna-rae-cakes_browser.png
+    title: Jenna Rae Cakes
+    services: Website design
   - type: mockup
     image:
       url: /assets/images/client_the-citizen_browser.png
