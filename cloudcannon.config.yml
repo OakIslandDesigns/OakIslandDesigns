@@ -8,9 +8,6 @@ collections_config:
   - heading: Website
     collections:
       - pages
-  - heading: Collections
-    collections:
-      - portfolio
   - heading: Settings
     collections:
       - data
