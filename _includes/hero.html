@@ -1,0 +1,34 @@
+<div class="hero-wrapper">
+  <div class="hero hero--{{ include.type }}">
+    <div class="container">
+      <div class="grid-middle">
+
+        <div class="col">
+          <div class="hero__content">
+            <div class="hero__content-words">
+              <h1 class="hero__content-heading">{{ page.hero.heading | newline_to_br }}</h1>
+              <div class="hero__content-text">{{ page.hero.subtext | markdownify }}</div>
+            </div>
+            <div class="buttons">
+              {% capture buttonTitle %}{%- if page.hero.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.button.icon }}"></i>{%- endif -%}{{ page.hero.button.title }}{% endcapture %}
+              {%- include typeform-link.html title=page.hero.button.title content=buttonTitle class="button button--secondary" -%}
+              <a class="button button--subtle button--subtle-white" href="{{ page.hero.link.link }}" title="{{ page.hero.link.title }}{{ site.title | prepend: ' | ' }}">
+                {%- if page.hero.link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.hero.link.icon }}"></i>{%- endif -%}{{ page.hero.link.title }}
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col sm-hide">
+          <div class="hero__logo">
+            <img class="hero__logo-image block animate-float" src="/assets/images/logo-circle.svg" alt="Oak Island Designs Icon" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="hero-background-slideshow">
+    <div class="hero-background-slideshow-images animated-slideshow-v"></div>
+  </div>
+</div>

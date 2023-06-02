@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Biennale';
+  src: url('/assets/fonts/biennale-black-webfont.woff2') format('woff2'),
+       url('/assets/fonts/biennale-black-webfont.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Biennale';
+  src: url('/assets/fonts/biennale-regular-webfont.woff2') format('woff2'),
+       url('/assets/fonts/biennale-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Biennale';
+  src: url('/assets/fonts/biennale-regularit-webfont.woff2') format('woff2'),
+       url('/assets/fonts/biennale-regularit-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Biennale';
+  src: url('/assets/fonts/biennale-semibold-webfont.woff2') format('woff2'),
+       url('/assets/fonts/biennale-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

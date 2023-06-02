@@ -1,0 +1,25 @@
+{%- assign cta = site.data.global.call_to_action -%}
+<div class="content-section content-section--no-top">
+  <div class="container">
+
+    <div class="cta-wrapper">
+      <div class="cta">
+        <div class="grid-middle-spaceBetween">
+          <div class="col col-sm-12">
+            <div class="cta__content">
+              <h4 class="h3 cta__content-heading">{{ cta.heading }}</h4>
+              <h4 class="h3 cta__content-subheading">{{ cta.subheading }}</h3>
+            </div>
+          </div>
+          <div class="col-right_sm-12">
+            <div class="cta__button">
+              {% capture buttonTitle %}{%- if cta.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ cta.button.icon }}"></i>{%- endif -%}{{ cta.button.title }}{% endcapture %}
+              {%- include typeform-link.html title=cta.button.title content=buttonTitle class="button" -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

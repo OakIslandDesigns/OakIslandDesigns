@@ -1,10 +1,38 @@
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-{%- if jekyll.environment == "development" -%}
-  <script src="https://kit.fontawesome.com/5dbcdac6d1.js" crossorigin="anonymous"></script>
-{%- else -%}
-  <script src="https://kit.fontawesome.com/0d36ec906e.js" crossorigin="anonymous"></script>
-{%- endif -%}
-
-<script src="{{ "/assets/magnific-popup.min.js" | relative_url }}"></script>
-<script src="{{ "/assets/main.js" | relative_url }}"></script>
+{%- assign header = site.data.global.header -%}
+{%- assign footer = site.data.global.footer -%}
+<footer class="footer text-center">
+  <div class="container">
+    <div class="footer__section">
+      <a class="block footer__logo" href="/" title="Homepage{{ site.title | prepend: ' | ' }}">
+        <img class="block footer__logo-image" class="block" src="{{ footer.image.url }}" width="64" height="64" alt="Oak Island Designs Icon"/>
+      </a>
+    </div>
+    <div class="footer__section">
+      <ul class="footer__nav">
+        {%- for link in header.navigation -%}
+          {%- if link.title contains "Free Quote" -%}
+            <li class="footer__nav-item">
+              {%- include typeform-link.html title=link.title class="button button--subtle footer__nav-item-link" -%}
+            </li>
+          {%- else -%}
+            <li class="footer__nav-item">
+              <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{{ link.title }}</a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="footer__section">
+      <ul class="footer__nav">
+        {%- for link in footer.contact -%}
+          <li class="footer__nav-item">
+            <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{%- if link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.text }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="footer__section">
+      <p class="sm footer__copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
+    </div>
+  </div>
+</footer>
