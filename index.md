@@ -55,7 +55,7 @@ about:
     I believe that the power of design goes beyond mere aesthetics. It's about communicating your unique story to your audience, building connections, and driving action. Whether it's through a visually stunning and user-friendly website, a memorable logo, or a powerful Shopify store, I'm committed to making your brand shine in the digital landscape.
 
 
-    What sets OAK ISLAND DESIGNS apart? It's my unwavering commitment to transparency, affordability, and clear communication. You won't find any hidden costs here, only honest work. Regardless of your budget, I strive to deliver value that exceeds your investment. And from our first conversation to the final product, I'll keep you in the loop, ensuring that you're part of the journey every step of the way.
+    What sets OAK ISLAND DESIGNS apart? It's my unwavering commitment to transparency, affordability, and clear communication. You won't find any hidden costs here, only honest work. Regardless of your budget, I strive to deliver value that exceeds your investment. From our first conversation to the final product, I'll keep you in the loop, ensuring that you're part of the journey every step of the way.
   content_link:
     icon: arrow-right
     title: Ready to elevate your business?
