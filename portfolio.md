@@ -54,6 +54,10 @@ portfolio:
       url: /assets/images/client_jenna-rae-cakes_browser.png
     title: Jenna Rae Cakes
     services: Website design
+    link:
+      icon: external-link
+      title: View Site
+      link: https://jennaraecakes.com/
   - type: mockup
     image:
       url: /assets/images/client_the-citizen_browser.png
