@@ -14,6 +14,14 @@
   {% capture pageTitle %}{{ page.seo.title }}{% endcapture %}
   {% capture pageDescription %}{{ page.seo.description }}{% endcapture %}
 
+  {%- if page.layout == "article" -%}
+    {%- assign pageImage = page.banner.url | absolute_url -%}
+    {%- assign pageType = "article" -%}
+  {%- else -%}
+    {%- assign pageImage = "/assets/images/social_oak-island-designs_facebook.png" | absolute_url -%}
+    {%- assign pageType = "website" -%}
+  {%- endif -%}
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
