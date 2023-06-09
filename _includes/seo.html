@@ -16,6 +16,7 @@
   }
 </script>
 
+{%- if page.layout == "home" -%}
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,6 +49,7 @@
     } 
   }
 </script>
+{%- endif -%}
 
 {%- if page.layout == "article" -%}
 <script type="application/ld+json">
