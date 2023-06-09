@@ -6,6 +6,10 @@ seo:
   title: "About | Oak Island Designs - Your Digital Design Partner"
   description: >-
     Discover Oak Island Designs—your reliable partner for digital design in Manitoba. Offering transparency, affordability, and clear communication.
+sidebar_image:
+  url: /assets/images/justin-patenaude_oak-island-designs.webp
+  alt: Justin Patenaude, the owner of Oak Island Designs
+  caption: Photography by [Alice & Flore](https://www.aliceandflore.com/)
 button:
   icon: message-smile
   title: Let's Talk
@@ -18,6 +22,7 @@ content_cta:
 ## My Story
 OAK ISLAND DESIGNS is more than just a name—it's a testament to my roots and dedication to helping local businesses thrive in the digital world. I've been living and breathing digital design in Ile-des-Chênes, Manitoba for over ten years, and in this time, I've seen the incredible impact a strong online presence can have on businesses of all sizes. My goal? To make the online world more accessible, productive, and impactful for local businesses.
 
+![](/assets/images/about-image.webp)
 
 ## My Expertise
 In the digital sphere, I've worn many hats. From the intricate artistry of website design to the complex mechanics of development, from ensuring seamless website management to building captivating Shopify stores, and from crafting distinct logos to empowering businesses with robust content and SEO strategies—my ten years in this field have been filled with diverse and enriching experiences. This extensive skill set allows me to offer you a comprehensive digital design solution tailored to your unique needs.

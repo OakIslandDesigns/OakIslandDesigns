@@ -1,0 +1,15 @@
+<div class="article-block">
+  <div class="article-block__top">
+    <a class="article-block__image-wrapper" href="{{ article.url }}" title="{{ article.title }}">
+      <img class="image article-block__image" src="{{ article.thumbnail.url }}" alt="{{ article.thumbnail.alt }}" />
+    </a>
+    <a class="article-block__content-title" href="{{ article.url }}" title="{{ article.title }}">
+      <h2 class="h3 article-block__content-title-link">{{ article.title }}</h2>
+    </a>
+  </div>
+  <p>{{ article.seo.description }}</p>
+  <div class="article-block__content-bottom">
+    <p class="article-block__content-author">By <span>{{ article.author }}</span></p>
+    <p class="sm">{{ article.estimate }} minute read</p>
+  </div>
+</div>

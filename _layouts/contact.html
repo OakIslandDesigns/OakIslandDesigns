@@ -1,6 +1,28 @@
 ---
 layout: page
 ---
-{{ page.content | markdownify }}
-{% include contact-form.html %}
-{%- include profile.html -%}
+{%- assign footer = site.data.global.footer -%}
+<div class="col-hug_md-12 col-gap64">
+  {%- capture extras -%}
+    <ul class="content-section__sidebar-links">
+      {%- for link in footer.contact -%}
+        <li>
+          <a class="button button--subtle" href="{{ link.link }}">{%- if link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.text }}</a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endcapture -%}
+  {%- include sidebar.html
+    title=page.title
+    subtitle=page.subtitle
+    button_title=page.button.title
+    button_link=page.button.link
+    button_icon=page.button.icon
+    extras_below=extras
+  -%}
+</div>
+<div class="col col_md-12 col-gap64 rte mw-0">
+  {{ page.content | markdownify }}
+  {% include contact-form.html %}
+  {%- include profile.html -%}
+</div>

@@ -1,0 +1,20 @@
+---
+layout: page
+---
+<div class="col-12 col-gap64 mb-64 md-mb-0">
+  {%- include sidebar.html
+    title=page.title
+    subtitle=page.subtitle
+    line=false
+  -%}
+</div>
+<div class="col-12 col-gap64">
+  <div class="grid-3_md-2_sm-1 grid-gap40">
+    {%- assign articles = site.blog | reverse -%}
+    {%- for article in articles -%}
+      <div class="col col-gap40">
+        {%- include article-block.html -%}
+      </div>
+    {%- endfor -%}
+  </div>
+</div>

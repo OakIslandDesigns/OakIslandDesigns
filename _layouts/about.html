@@ -1,10 +1,24 @@
 ---
 layout: page
 ---
-{{ page.content | markdownify }}
-{%- if page.content_cta.link and page.content_cta.link != blank -%}
-  <a class="button button--subtle button--subtle-large" href="{{ page.content_cta.link }}" title="{{ page.content_cta.title }}{{ site.title | prepend: ' | ' }}">
-    {{ page.content_cta.title }}{%- if page.content_cta.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.content_cta.icon }}"></i>{%- endif -%}
-  </a>
-{%- endif -%}
-{%- include profile.html -%}
+
+<div class="col-hug_md-12 col-gap64">
+  {%- include sidebar.html
+    title=page.title
+    subtitle=page.subtitle
+    button_title=page.button.title
+    button_link=page.button.link
+    button_icon=page.button.icon
+  -%}
+</div>
+<div class="col col_md-12 col-gap64 mw-0">
+  <div class="rte">
+    {{ page.content | markdownify }}
+  </div>
+  {%- if page.content_cta.link and page.content_cta.link != blank -%}
+    <a class="button button--subtle button--subtle-large" href="{{ page.content_cta.link }}" title="{{ page.content_cta.title }}{{ site.title | prepend: ' | ' }}">
+      {{ page.content_cta.title }}{%- if page.content_cta.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.content_cta.icon }}"></i>{%- endif -%}
+    </a>
+  {%- endif -%}
+  {%- include profile.html -%}
+</div>

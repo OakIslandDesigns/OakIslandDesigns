@@ -7,6 +7,8 @@ header:
       link: /services/
     - title: About
       link: /about/
+    - title: Blog
+      link: /blog/
     - title: Free Quote
       link: /free-quote/
     - title: Contact

@@ -1,0 +1,24 @@
+<div class="content-section__sidebar{% if include.class %} {{ include.class }}{% endif %}">
+  <div class="content-section__sidebar-top">
+    <h1 class="content-section__sidebar-heading">{{ include.title }}</h1>
+    {%- if include.subtitle -%}
+      <p class="content-section__sidebar-subtitle">{{ include.subtitle }}</p>
+    {%- endif -%}
+  </div>
+  {%- if include.extras_above -%}
+    {{ include.extras_above }}
+  {%- endif -%}
+  {%- if include.button_title -%}
+  <div class="buttons content-section__sidebar-buttons">
+    <a class="button" href="{{ include.button_link }}" title="{{ include.button_title }}{{ site.title | prepend: ' | ' }}">
+      {%- if include.button_icon != blank -%}<i class="fa-sharp fa-solid fa-{{ include.button_icon }}"></i>{%- endif -%}{{ include.button_title }}
+    </a>
+  </div>
+  {%- endif -%}
+  {%- if include.extras_below -%}
+    {{ include.extras_below }}
+  {%- endif -%}
+  {%- unless include.line == false -%}
+    <div class="line content-section__sidebar-line"></div>
+  {%- endunless -%}
+</div>

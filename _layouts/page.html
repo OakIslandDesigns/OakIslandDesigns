@@ -1,37 +1,11 @@
 ---
 layout: default
 ---
-{%- assign footer = site.data.global.footer -%}
 <div class="content-section">
   <div class="container">
     <div class="grid grid-gap64">
 
-      <div class="col-hug_md-12 col-gap64">
-        <div class="content-section__sidebar">
-          <h1 class="content-section__sidebar-heading">{{ page.title }}</h1>
-          <p class="content-section__sidebar-subtitle">{{ page.subtitle }}</p>
-          {%- if page.button.title -%}
-          <div class="buttons content-section__sidebar-buttons">
-            <a class="button" href="{{ page.button.link }}" title="{{ page.button.title }}{{ site.title | prepend: ' | ' }}">
-              {%- if page.button.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ page.button.icon }}"></i>{%- endif -%}{{ page.button.title }}
-            </a>
-          </div>
-          {%- endif -%}
-          {%- if page.layout == "contact" -%}
-            <ul class="content-section__sidebar-links">
-              {%- for link in footer.contact -%}
-                <li>
-                  <a class="button button--subtle" href="{{ link.link }}">{%- if link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.text }}</a>
-                </li>
-              {%- endfor -%}
-            </ul>
-          {%- endif -%}
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="col col_md-12 col-gap64 rte mw-0">
-        {{ content }}
-      </div>
+      {{ content }}
 
     </div>
   </div>

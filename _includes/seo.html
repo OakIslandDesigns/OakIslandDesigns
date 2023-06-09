@@ -1,0 +1,79 @@
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ pageDescription }}">
+<link rel="canonical" href="{{ pageUrl }}">
+
+<meta property="og:url" content="{{ pageUrl }}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ pageTitle }}" />
+<meta property="og:description" content="{{ pageDescription }}" />
+<meta property="og:image" content="{{ site.url }}/assets/images/social_oak-island-designs_facebook.png" />
+
+<script type="application/ld+json">
+  {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  "name": "Oak Island Designs"
+  }
+</script>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Oak Island Designs",
+    "image": "https://oakislanddesigns.com/assets/images/social_oak-island-designs_facebook.png",
+    "@id": "",
+    "url": "https://oakislanddesigns.com",
+    "telephone": "204-955-0092",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "414 Main St",
+      "addressLocality": "Ile des Chenes",
+      "addressRegion": "MB",
+      "postalCode": "R0A0T0",
+      "addressCountry": "CA"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "07:00",
+      "closes": "21:00"
+    } 
+  }
+</script>
+
+{%- if page.layout == "article" -%}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    },
+    "headline": "{{ page.title }}",
+    "description": "{{ page.seo.description }}",
+    "image": "{{ page.banner.url | absolute_url }}",  
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author }}"
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ site.title }}",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/images/logo.svg' | absolute_url }}"
+      }
+    },
+    "datePublished": "{{ page.date | date: '%Y-%m-%d' }}"
+  }
+  </script>
+  {%- endif -%}

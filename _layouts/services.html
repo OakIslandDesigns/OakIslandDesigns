@@ -1,7 +1,18 @@
 ---
 layout: page
 ---
-{%- for service in site.data.global.services -%}
-  <h2>{{ service.heading }}</h2>
-  <p>{{ service.text }}</p>
-{%- endfor -%}
+<div class="col-hug_md-12 col-gap64">
+  {%- include sidebar.html
+    title=page.title
+    subtitle=page.subtitle
+    button_title=page.button.title
+    button_link=page.button.link
+    button_icon=page.button.icon
+  -%}
+</div>
+<div class="col col_md-12 col-gap64 rte mw-0">
+  {%- for service in site.data.global.services -%}
+    <h2>{{ service.heading }}</h2>
+    <p>{{ service.text }}</p>
+  {%- endfor -%}
+</div>

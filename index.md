@@ -26,7 +26,7 @@ services:
   subtitle: Expert solutions for your digital success.
   button:
     icon: arrow-right
-    title: Our Services
+    title: Services
     link: /services/
   link:
     icon: message-smile
@@ -42,7 +42,7 @@ about:
   subtitle: Crafting your digital journey together.
   button:
     icon: arrow-right
-    title: About Us
+    title: About
     link: /about/
   link:
     icon: message-smile
