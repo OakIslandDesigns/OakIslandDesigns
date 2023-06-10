@@ -21,8 +21,10 @@ layout: page
     extras_below=extras
   -%}
 </div>
-<div class="col col_md-12 col-gap64 rte mw-0">
-  {{ page.content | markdownify }}
-  {% include contact-form.html %}
+<div class="col col_md-12 col-gap64 mw-0">
+  <div class="rte">
+    {{ page.content | markdownify }}
+    {% include contact-form.html %}
+  </div>
   {%- include profile.html -%}
 </div>

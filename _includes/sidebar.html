@@ -9,7 +9,7 @@
     {{ include.extras_above }}
   {%- endif -%}
   {%- if include.button_title -%}
-  <div class="buttons content-section__sidebar-buttons">
+  <div class="buttons content-section__sidebar-buttons md-hide">
     <a class="button" href="{{ include.button_link }}" title="{{ include.button_title }}{{ site.title | prepend: ' | ' }}">
       {%- if include.button_icon != blank -%}<i class="fa-sharp fa-solid fa-{{ include.button_icon }}"></i>{%- endif -%}{{ include.button_title }}
     </a>

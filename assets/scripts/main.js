@@ -48,7 +48,7 @@ bars and other browser stuff.
 ======================================= */
 const documentHeight = () => {
   const doc = document.documentElement;
-  console.log('doc', doc);
+  // console.log('doc', doc);
   doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
 }
 window.addEventListener('resize', documentHeight);

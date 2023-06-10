@@ -7,7 +7,7 @@
         <img class="block footer__logo-image" class="block" src="{{ footer.image.url }}" width="64" height="64" alt="Oak Island Designs Icon"/>
       </a>
     </div>
-    <div class="footer__section">
+    <div class="footer__section sm-hide">
       <ul class="footer__nav">
         {%- for link in header.navigation -%}
           {%- if link.title contains "Free Quote" -%}
@@ -31,8 +31,6 @@
         {%- endfor -%}
       </ul>
     </div>
-    <div class="footer__section">
-      <p class="sm footer__copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
-    </div>
+    <p class="sm copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</a></p>
   </div>
 </footer>
