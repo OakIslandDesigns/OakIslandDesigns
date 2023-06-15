@@ -14,7 +14,7 @@ form:
     placeholder: jane.doe@email.com
   phone:
     label: Phone Number
-    required: true
+    required: false
     placeholder: 204-999-9999
   message:
     label: Message
