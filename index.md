@@ -11,7 +11,7 @@ hero:
 
     One Pixel at a Time.
   subtext: >-
-    Crafting digital experiences in Ile-des-Chênes and beyond.
+    Creating digital experiences in Ile-des-Chênes and beyond.
   button:
     icon: message-dollar
     title: Get a Free Quote

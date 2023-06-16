@@ -12,7 +12,12 @@ layout: page
 </div>
 <div class="col col_md-12 col-gap64 rte mw-0">
   {%- for service in site.data.global.services -%}
-    <h2>{{ service.heading }}</h2>
-    <p>{{ service.text }}</p>
+    <div class="service">
+      <div class="service__icon-wrapper">
+        <img class="service__icon" src="{{ service.icon | absolute_url }}" alt="Icon representing {{ service.heading }}" />
+      </div>
+      <h2 class="service__heading">{{ service.heading }}</h2>
+      <p>{{ service.text }}</p>
+    </div>
   {%- endfor -%}
 </div>

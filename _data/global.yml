@@ -29,31 +29,37 @@ footer:
       link: "mailto: justin@oakislanddesigns.com"
 services:
   - heading: Website Design
+    icon: /assets/images/icon_website-design.svg
     excerpt: >-
       Your vision, transformed into a vivid website blueprint. Let's craft your dream site together.
     text: >-
       Website design at OAK ISLAND DESIGNS is a collaborative journey. I listen closely to your needs, learn about your brand, and visualize your goals. Using this knowledge, I design a prototype of your website, giving you a tangible representation before development begins. It's a blueprint, ensuring we're building exactly what you envision.
   - heading: Website Development
+    icon: /assets/images/icon_website-development.svg
     excerpt: >-
       Turning designs into functional, user-friendly websites. Your site will look and work beautifully.
     text: >-
       At OAK ISLAND DESIGNS, the transformation of your website design into a functional digital experience happens with meticulous precision. As a professional with years of experience, I craft websites that are user-friendly, intuitive, and responsive. The goal is to ensure that your website not only looks great but also performs seamlessly across all devices. From coding to building, every detail is designed with your vision in mind.
   - heading: Website Management
+    icon: /assets/images/icon_website-management.svg
     excerpt: >-
       Leave the website upkeep to me. Focus on your business, while I handle the digital details.
     text: >-
       I understand that running a business is demanding, and maintaining a website can add to your workload. That's where I come in. With website management services tailored to your needs, I ensure your website stays up-to-date and runs smoothly. From content updates to domain and email management, leave the technicalities to me while you focus on your core business.
-  - heading: Shopify Development
+  - heading: Ecommerce
+    icon: /assets/images/icon_ecommerce.svg
     excerpt: >-
-      Looking to sell online? With years of Shopify experience, I'll craft your standout digital store.
+      Looking to sell online? With years of Shopify experience, I'll design and build your standout digital store.
     text: >-
       Are you considering e-commerce? Shopify is an excellent platform, and with over seven years of experience developing on it, I can help set up an online store that truly represents your brand. From basic setup to custom design and features, I'll create a Shopify experience that's designed to captivate and convert your customers.
   - heading: Logo Design
+    icon: /assets/images/icon_logo-design.svg
     excerpt: >-
       Create a unique and memorable logo that encapsulates your brand's identity.
     text: >-
       A logo is a key component of your brand identity, encapsulating your brand's values in a single, memorable symbol. As an experienced designer, I understand the importance of this task. Whether you're a new business looking to create a fresh logo or an existing one considering a redesign, I'm here to bring your vision to life, creating a unique logo that truly represents your brand.
   - heading: Content & SEO Services
+    icon: /assets/images/icon_content-and-seo.svg
     excerpt: >-
       Attract and convert your audience with AI-powered content and Search Engine Optimization strategies that elevate your visibility.
     text: >-
@@ -72,7 +78,7 @@ profile:
     Outside of work, Justin enjoys spending time with his wife and two kids, and indulges in movies and games during his downtime.
 call_to_action:
   heading: Looking for exceptional design?
-  subheading: Let's bring your vision to life.
+  subheading: 
   button:
     icon: message-dollar
     title: Get a Free Quote

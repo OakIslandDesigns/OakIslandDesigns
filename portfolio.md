@@ -71,9 +71,13 @@ portfolio:
       link: https://nivervillecitizen.com
   - type: logo
     image:
-      url: /assets/images/client_astrobeam_logo.svg
-    title: AstroBeam
-    services: Logo design
+      url: /assets/images/client_ignite-massage-therapy_logo.svg
+    title: Ignite Massage Therapy
+    services: Logo design and website set up
+    link:
+      icon: external-link
+      title: View Site
+      link: https://ignitemassage.com/
   - type: mockup
     image:
       url: /assets/images/client_inex-plastering-and-stucco_browser.png
@@ -90,7 +94,7 @@ portfolio:
     services: Website design
   - type: logo
     image:
-      url: /assets/images/client_grouse-tales-shorthairs_logo.svg
-    title: Grouse Tales Shorthairs
+      url: /assets/images/client_astrobeam_logo.svg
+    title: AstroBeam
     services: Logo design
 ---

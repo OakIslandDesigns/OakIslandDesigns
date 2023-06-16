@@ -29,6 +29,9 @@ layout: default
           <div class="grid grid-gap40">
             {%- for service in site.data.global.services -%}
               <div class="col-6_xs-12 col-gap40 content-section__block">
+                <div class="service__icon-wrapper">
+                  <img src="{{ service.icon | absolute_url }}" alt="Icon representing {{ service.heading }}" />
+                </div>
                 <h3 class="h2">{{ service.heading }}</h3>
                 <p>{{ service.excerpt }}</p>
               </div>

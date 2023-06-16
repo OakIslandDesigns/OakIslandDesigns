@@ -60,6 +60,9 @@
   --transition: all .2s ease-in-out;
   --drop-shadow-sm: drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.35));
   --box-shadow-fancy: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  --box-shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --box-shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --box-shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 @media screen and (max-width: 1024px){
@@ -294,6 +297,10 @@ p a {
     background: transparent;
     border: 1px solid var(--color-secondary);
   }
+    .button--wire:hover {
+      color: var(--color-lightest);
+      background: var(--color-secondary);
+    }
   .button--icon {
     font-size: var(--font-size-h4);
   }
@@ -430,6 +437,10 @@ strong {
     .layout-home .header__nav-item-button {
       background-color: var(--color-secondary);
     }
+      .layout-home .header__nav-item-button:hover {
+        color: var(--color-lightest);
+        background-color: var(--color-accent);
+      }
 
 /* Mobile
 =================================*/
@@ -594,7 +605,7 @@ $header-height: 76px;
     padding: var(--gap-32);
     background-color: var(--color-lightest);
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-fancy);
+    box-shadow: var(--box-shadow-xl);
 
     @media screen and (max-width: 1024px){
       margin-top: var(--gap-40);
@@ -795,7 +806,7 @@ $header-height: 76px;
     width: 320px;
     aspect-ratio: 1.28/1;
     border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow-fancy);
+    box-shadow: var(--box-shadow-xl);
     overflow: hidden;
 
     @media screen and (max-width: 768px){
@@ -816,6 +827,36 @@ $header-height: 76px;
       width: 100%;
       max-height: 100%;
     }
+
+/* Services
+=================================*/
+.service {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.service__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  background-color: var(--color-lightest);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-xl);
+}
+.service__icon {
+  width: 48px;
+  height: 48px;
+}
+.service .service__heading {
+  margin-top: 0;
+}
 
 /* Blog
 =================================*/
@@ -917,7 +958,7 @@ $header-height: 76px;
   max-width: 900px;
   margin: 0 auto;
   background-color: var(--color-accent);
-  box-shadow: var(--box-shadow-fancy);
+  box-shadow: var(--box-shadow-xl);
 }
   .cta {
     width: 100%;
