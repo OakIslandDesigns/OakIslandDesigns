@@ -11,4 +11,6 @@ Welcome to OAK ISLAND DESIGNS—the first step in elevating your business online
 
 Do you have any questions? Send me a message using the form below and I'll get back to you within 24 hours.
 
+Already know what you want? [Fill out this form instead](/free-quote/) and I'll get back to you with a free quote.
+
 ### Contact Form

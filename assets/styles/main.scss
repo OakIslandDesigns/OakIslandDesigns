@@ -161,6 +161,8 @@ body {
   line-height: var(--line-height-text);
   color: var(--color-secondary);
   background-color: var(--color-grey);
+  opacity: 0;
+  transition: opacity 250ms;
 }
 
 /* Helpers
@@ -211,12 +213,11 @@ h6, .h6 {font-size: var(--font-size-h6); font-weight: var(--font-weight-semibold
 p, li {
   color: var(--color-secondary);
 }
-p a {
-  font-weight: var(--font-weight-semibold);
+p a, li a {
   color: var(--color-secondary);
   transition: var(--transition);
 }
-  p a:hover {
+  p a:hover, li a:hover {
     color: var(--color-accent);
   }
 .buttons {
@@ -858,6 +859,14 @@ $header-height: 76px;
   margin-top: 0;
 }
 
+/* Free Quote
+=================================*/
+.free-quote__wrapper {
+  border: 1px solid var(--color-secondary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
 /* Blog
 =================================*/
 .article-block {
@@ -1011,6 +1020,17 @@ $header-height: 76px;
   .footer__logo {
     margin-bottom: var(--gap-16);
   }
+    .footer__logo-image {
+      display: block;
+      width: 80px;
+      height: 80px;
+    }
+      .footer__logo-image path {
+        transition: all .44s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+      }
+        .footer__logo-image:hover path {
+          fill: var(--color-lightest);
+        }
   .footer__nav {
     display: flex;
     gap: var(--gap-24);

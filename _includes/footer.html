@@ -4,21 +4,15 @@
   <div class="container">
     <div class="footer__section">
       <a class="block footer__logo" href="/" title="Homepage{{ site.title | prepend: ' | ' }}">
-        <img class="block footer__logo-image" class="block" src="{{ footer.image.url }}" width="64" height="64" alt="Oak Island Designs Icon"/>
+        {% include logo.html class="footer__logo-image" type="circle" %}
       </a>
     </div>
     <div class="footer__section sm-hide">
       <ul class="footer__nav">
         {%- for link in header.navigation -%}
-          {%- if link.title contains "Free Quote" -%}
-            <li class="footer__nav-item">
-              {%- include typeform-link.html title=link.title class="button button--subtle footer__nav-item-link" -%}
-            </li>
-          {%- else -%}
-            <li class="footer__nav-item">
-              <a class="button button--subtle footer__nav-item-link" href="{{ link.link }}">{{ link.title }}</a>
-            </li>
-          {%- endif -%}
+          <li class="footer__nav-item">
+            <a class="button button--subtle footer__nav-item-link" href="{{ link.link | absolute_url }}">{{ link.title }}</a>
+          </li>
         {%- endfor -%}
       </ul>
     </div>

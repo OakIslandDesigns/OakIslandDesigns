@@ -14,6 +14,14 @@ var getUrlParameter = function getUrlParameter(sParam) {
   return false;
 };
 
+/* Load fade-in
+======================================= */
+window.addEventListener('DOMContentLoaded', (event) => {
+  setTimeout(function() {
+      document.body.style.opacity = "1";
+  }, 500);
+});
+
 //If the contact form sent successfully, show the "Thank you" message.
 if(getUrlParameter('form') == "success"){
 	var contactMessage = $('.contact-message');

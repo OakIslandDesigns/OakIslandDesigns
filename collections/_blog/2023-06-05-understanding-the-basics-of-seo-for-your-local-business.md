@@ -6,7 +6,7 @@ banner:
   url: /assets/images/article-02_banner.webp
   alt: A customer who is about to tap 'search' on their laptop.
 thumbnail:
-  url: /assets/images/article-02_banner.webp
+  url: /assets/images/article-02_thumb.webp
   alt: A customer who is about to tap 'search' on their laptop.
 author: Justin Patenaude
 estimate: 3

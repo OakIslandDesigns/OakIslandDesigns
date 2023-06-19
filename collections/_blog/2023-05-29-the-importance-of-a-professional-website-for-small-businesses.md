@@ -6,7 +6,7 @@ banner:
   url: /assets/images/article-01_banner.webp
   alt: The Bargain Bureau website, a local small business who used Oak Island Designs to redesign their website.
 thumbnail:
-  url: /assets/images/article-01_banner.webp
+  url: /assets/images/article-01_thumb.webp
   alt: The Bargain Bureau website, a local small business who used Oak Island Designs to redesign their website.
 author: Justin Patenaude
 estimate: 2

@@ -2,7 +2,7 @@
 <header class="header" role="banner">
   <div class="grid-spaceBetween-middle">
     <div class="col-hug">
-      <a class="block header__logo" href="/" title="Homepage{{ site.title | prepend: ' | ' }}">
+      <a class="block header__logo" href="{{ '/' | absolute_url }}" title="Homepage{{ site.title | prepend: ' | ' }}">
         {% include logo.html class="header__logo-image" %}
       </a>
     </div>
@@ -13,20 +13,14 @@
             {%- for link in header.navigation -%}
               {%- if link.button -%}
                 <li class="header__nav-item">
-                  <a class="button button--secondary header__nav-item-button" href="{{ link.link }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">
+                  <a class="button button--secondary header__nav-item-button" href="{{ link.link | absolute_url }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">
                     {%- if link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.title }}
                   </a>
                 </li>
               {%- else -%}
-                {%- if link.title contains "Free Quote" -%}
-                  <li class="header__nav-item">
-                    {%- include typeform-link.html title=link.title class="button button--subtle header__nav-item-link" -%}
-                  </li>
-                {%- else -%}
-                  <li class="header__nav-item">
-                    <a class="button button--subtle header__nav-item-link" href="{{ link.link }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">{{ link.title }}</a>
-                  </li>
-                {%- endif -%}
+                <li class="header__nav-item">
+                  <a class="button button--subtle header__nav-item-link" href="{{ link.link | absolute_url }}" title="{{ link.title }}{{ site.title | prepend: ' | ' }}">{{ link.title }}</a>
+                </li>
               {%- endif -%}
             {%- endfor -%}
           </ul>

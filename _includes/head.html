@@ -31,6 +31,12 @@
   <link rel="icon" type="image/png" href="{{ '/favicon.png' | relative_url }}" />
 
   <link rel="stylesheet" href="{{ '/assets/styles/main.css' | relative_url }}">
+  <noscript>
+    <style>
+      body {opacity: 1;}
+      .button i {display: none;}
+    </style>
+  </noscript>
 
   {%- if isProd -%}
     {% include google-analytics.html %}
