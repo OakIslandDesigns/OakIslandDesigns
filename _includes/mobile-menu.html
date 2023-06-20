@@ -1,11 +1,7 @@
 <div class="mobile-menu">
   {%- for link in header.navigation -%}
-    {%- if link.title contains "Free Quote" -%}
-      {%- include typeform-link.html title=link.title class="h2 mobile-menu__link" -%}
-    {%- else -%}
-      <a class="h2 mobile-menu__link" href="{{ link.link }}" title="{{ link.title | append: site.alt_title }}">
-        {%- if link.icon and link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.title }}
-      </a>
-    {%- endif -%}
+    <a class="h2 mobile-menu__link" href="{{ link.link }}" title="{{ link.title | append: site.alt_title }}">
+      {%- if link.icon and link.icon != blank -%}<i class="fa-sharp fa-solid fa-{{ link.icon }}"></i>{%- endif -%}{{ link.title }}
+    </a>
   {%- endfor -%}
 </div>
