@@ -42,7 +42,6 @@ data_dir: _data
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-sitemap
 
