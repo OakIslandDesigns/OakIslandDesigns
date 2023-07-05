@@ -188,6 +188,9 @@ body {
 .mb-64 {
   margin-bottom: var(--gap-64);
 }
+.mb-40 {
+  margin-bottom: var(--gap-40);
+}
 @media screen and (max-width: 1024px){
   .md-mb-0 {
     margin-bottom: 0;
@@ -341,6 +344,11 @@ strong {
     display: block;
     width: 100%;
     border-radius: var(--border-radius);
+  }
+  .rte img + em {
+    margin-top: 4px;
+    font-size: var(--font-size-sm);
+    font-style: italic;
   }
 
 .form__group {

@@ -12,7 +12,7 @@ layout: page
   <div class="grid-3_md-2_sm-1 grid-gap40">
     {%- assign articles = site.blog | reverse -%}
     {%- for article in articles -%}
-      <div class="col col-gap40 md-mb-40">
+      <div class="col col-gap40 mb-40">
         {%- include article-block.html -%}
       </div>
     {%- endfor -%}
