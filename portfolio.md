@@ -14,6 +14,15 @@ button:
 portfolio:
   - type: mockup
     image:
+      url: /assets/images/client_genesis-electric_browser.png
+    title: Genesis Electric
+    services: Website design & development, Logo design, Website management
+    link:
+      icon: external-link
+      title: View Site
+      link: https://balticathletics.com
+  - type: mockup
+    image:
       url: /assets/images/client_baltic-athletics_browser.png
       width: 320
       height: 250
@@ -96,10 +105,9 @@ portfolio:
     image:
       url: /assets/images/client_astrobeam_logo.svg
     title: AstroBeam
-    services: Logo design
-  - type: mockup
-    image:
-      url: /assets/images/client_genesis-electric_browser.png
-    title: Genesis Electric
-    services: Website design & development, Logo design, Website management
+    services: Logo design and website set up
+    link:
+      icon: external-link
+      title: View Site
+      link: https://www.astrobeam.com/
 ---
