@@ -97,4 +97,9 @@ portfolio:
       url: /assets/images/client_astrobeam_logo.svg
     title: AstroBeam
     services: Logo design
+  - type: mockup
+    image:
+      url: /assets/images/client_genesis-electric_browser.png
+    title: Genesis Electric
+    services: Website design & development, Logo design, Website management
 ---
