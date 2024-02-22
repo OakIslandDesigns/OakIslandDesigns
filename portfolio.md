@@ -20,7 +20,7 @@ portfolio:
     link:
       icon: external-link
       title: View Site
-      link: https://balticathletics.com
+      link: https://genesiselectric.info
   - type: mockup
     image:
       url: /assets/images/client_baltic-athletics_browser.png
