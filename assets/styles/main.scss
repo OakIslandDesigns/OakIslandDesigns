@@ -403,6 +403,9 @@ strong {
   background-color: var(--color-secondary);
   transition: all .44s cubic-bezier(0.17, 0.04, 0.03, 0.94);
 }
+  .header .container {
+    padding: 0;
+  }
   .header--scrolled {
     background-color: var(--color-secondary)!important;
     box-shadow: 0 4px 16px rgba(0,0,0,0.1);
